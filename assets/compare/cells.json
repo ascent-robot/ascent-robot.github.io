@@ -6,21 +6,21 @@
    "label": "2.5 m  \u00b7  seed 7026",
    "distance": 2.5,
    "seed": 7026,
-   "note": "ASCENT repositions, then hands off and the door closes. N2M walks to its single predicted stance and cannot reach from there; \u03c00.5 alone drives itself in and never finds a workable pose."
+   "note": ""
   },
   {
    "dir": "d2p5_seed7075",
    "label": "2.5 m  \u00b7  seed 7075",
    "distance": 2.5,
    "seed": 7075,
-   "note": "Same 2.5 m band, a different draw of the approach bearing \u2014 and the same outcome for both baselines."
+   "note": ""
   },
   {
    "dir": "d1p5_seed7084",
    "label": "1.5 m  \u00b7  seed 7084",
    "distance": 1.5,
    "seed": 7084,
-   "note": "Close in, where the baselines should be at their best. ASCENT is finished and holding while both are still working; the padding at the end of its clip is that wait."
+   "note": ""
   }
  ]
 }

@@ -16,7 +16,7 @@
   <div class="wrap">
     <p class="venue">Preprint</p>
     <h1>ASCENT</h1>
-    <p class="subtitle">Learning <em>where to stand</em> so a frozen manipulation policy can succeed</p>
+    <p class="subtitle"></p>
     <p class="authors">Siyuan Zheng</p>
     <p class="affil">University of Michigan</p>
     <nav class="links">
@@ -31,13 +31,7 @@
 <section class="section" id="pipeline">
   <div class="wrap">
     <h2>How it works</h2>
-    <p class="lede">
-      Two onboard RGB views are the only input. The network lifts them into a
-      bird's-eye frame and predicts three fields &mdash; where the target is
-      (<b>T</b>), where the frozen policy would succeed from (<b>S</b>), and what
-      is traversable (<b>C</b>). A geodesic controller turns those into a single
-      potential <b>P</b>, and the robot climbs it.
-    </p>
+    <p class="lede"></p>
 
     <figure class="stage" id="stage">
       <div class="stage-head">
@@ -109,11 +103,7 @@
 
       </div>
 
-      <figcaption>
-        The robot starts turned away from the fridge, so <b>T</b> begins at the
-        edge of the frame and has to swing onto the target before <b>P</b> points
-        anywhere useful. An obstacle sits between the start pose and the fixture.
-      </figcaption>
+      <figcaption></figcaption>
     </figure>
   </div>
 </section>
@@ -122,12 +112,8 @@
   <div class="wrap">
     <h2>Same start, three systems</h2>
     <p class="lede">
-      These are cells from the 120-seed campaign where <b>ASCENT succeeded and
-      both baselines failed from the identical start pose</b> &mdash; the three
-      clips below are the same pose, the same scene, the same frozen
-      &pi;<sub>0.5</sub>, filmed from one fixed room camera.
-      <b>N2M</b> predicts a single stance and goes to it; <b>&pi;<sub>0.5</sub>
-      alone</b> never repositions at all.
+      Same start pose, same scene, same frozen &pi;<sub>0.5</sub>,
+      one fixed room camera.
     </p>
 
     <div class="chips" role="tablist" aria-label="start pose"></div>
@@ -136,44 +122,28 @@
       <figure class="cmp" data-system="ascent">
         <div class="cmp-head"><span class="name">ASCENT <em>(ours)</em></span><span class="badge"></span></div>
         <video muted playsinline preload="auto"></video>
-        <figcaption>predicts where to stand, then hands off</figcaption>
+        <figcaption></figcaption>
       </figure>
       <figure class="cmp" data-system="n2m">
         <div class="cmp-head"><span class="name">N2M</span><span class="badge"></span></div>
         <video muted playsinline preload="auto"></video>
-        <figcaption>one predicted stance, straight line to it</figcaption>
+        <figcaption></figcaption>
       </figure>
       <figure class="cmp" data-system="purepi05">
         <div class="cmp-head"><span class="name">&pi;<sub>0.5</sub> only</span><span class="badge"></span></div>
         <video muted playsinline preload="auto"></video>
-        <figcaption>no repositioning at all</figcaption>
+        <figcaption></figcaption>
       </figure>
     </div>
 
     <p class="cmp-note"></p>
-    <p class="fineprint">
-      N2M outputs a stance, not a path, so its evaluation teleports; here the
-      base is interpolated along the straight line to that <em>same</em> stance,
-      which leaves the outcome unchanged.
-      &pi;<sub>0.5</sub>'s action sampling is stochastic, so any single rollout
-      can disagree with the 120-seed campaign it was drawn from &mdash; in our
-      re-runs both baselines occasionally succeeded on a cell the campaign
-      recorded as a failure. Every cell here was therefore re-run at least three
-      times <em>per baseline</em> and kept only where both failed every time;
-      <b>of 39 candidates screened this way, 3 survived</b>. That low rate is
-      itself the honest result: on any one start pose a baseline's failure is
-      usually a coin flip, which is why the headline numbers are averages over
-      120 seeds rather than picked episodes.
-      The ASCENT clip replays that cell's recorded campaign episode; the two
-      baseline clips are fresh rollouts from the same start pose.
-    </p>
   </div>
 </section>
 
 <section class="section" id="rollout">
   <div class="wrap">
     <h2>Full rollout, with an obstacle</h2>
-    <p class="lede">Approach, detour around the obstacle, gate handoff, and the frozen &pi;<sub>0.5</sub> expert closing the door.</p>
+    <p class="lede"></p>
     <div class="videoframe">
       <video controls muted playsinline preload="metadata" poster="assets/img/rollout-poster.jpg">
         <source src="assets/video/with-obs.mp4" type="video/mp4">

@@ -83,6 +83,20 @@ a:hover{text-decoration:underline}
   transition:filter .32s ease,opacity .32s ease,box-shadow .32s ease;
 }
 .pane.lit{filter:none;opacity:1;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 6px 22px rgba(0,0,0,.45)}
+
+/* Past the gate handoff the fields and the top-down genuinely stop updating --
+   the navigation network is no longer in the loop. Say so rather than let a
+   viewer read seven frozen tiles as a broken player. */
+.flow.handoff .pane.field.lit,
+.flow.handoff .pane.top.lit{filter:grayscale(.6) brightness(.72);opacity:.82;box-shadow:none}
+.flow.handoff .group[data-stage="2"] .group-label::after,
+.flow.handoff .group[data-stage="3"] .group-label::after,
+.flow.handoff .group.always .group-label::after{content:" \00b7 frozen";color:#ffd24a;opacity:.9}
+/* `~` would not reach it: .stage-title sits in .stage-head, BEFORE .flow.
+   :has() does; browsers without it just keep the default colour and still get
+   the reworded title, which is the signal that matters. */
+.stage-title{transition:color .3s ease}
+.stage:has(.flow.handoff) .stage-title{color:#ffd24a}
 .pane video{display:block;width:100%;height:100%;object-fit:cover}
 /* Aspect ratios follow the packed clips: cameras and the top-down are square,
    the four BEV field panels are cropped to their 280x350 content (4:5). */

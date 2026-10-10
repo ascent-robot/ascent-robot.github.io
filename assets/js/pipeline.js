@@ -5,11 +5,14 @@
  *   2. The top-down pane is lit from the start and never dims.
  *   3. Groups light up left to right, REVEAL_MS apart. Nothing moves yet.
  *   4. The instant the last group (P) lights, every video starts together.
- *   5. When the longest stream ends, hold, then run the whole thing again.
+ *   5. Past the handoff frame the field panels and the top-down really ARE
+ *      frozen -- the navigation network is out of the loop and only the
+ *      cameras keep moving -- so the page says so instead of looking broken.
+ *   6. When the longest stream ends, hold, then run the whole thing again.
  *
  * All seven streams are rendered from the same episode with the same frame
- * count (see scripts/replay_level_b_smooth_video.py --dump-panels), so they
- * stay in step; a watchdog nudges any element that drifts.
+ * count (scripts/replay_level_b_smooth_video.py --dump-panels), so they stay
+ * in step; a watchdog nudges any element that drifts.
  */
 (function () {
   "use strict";
@@ -17,6 +20,9 @@
   var REVEAL_MS = 400;   // gap between groups lighting up
   var HOLD_MS   = 1100;  // pause on the last frame before looping
   var DRIFT_S   = 0.08;  // resync threshold, seconds
+
+  var NAV_LABEL  = "Perception → fields → potential";
+  var HAND_LABEL = "Gate handoff — fields frozen, π₀.₅ drives the arm";
 
   var flow = document.getElementById("flow");
   if (!flow) return;
@@ -27,11 +33,17 @@
                     .filter(Boolean);
   if (!videos.length) return;
 
+  var titleEl = document.querySelector(".stage-title");
+
+  function stageOf(p) {
+    var g = p.closest(".group");
+    return g ? parseInt(g.getAttribute("data-stage") || "0", 10) : 0;
+  }
+
   // Stage 0 panes (the top-down) are always lit; the rest reveal in order.
   var stages = [];
   panes.forEach(function (p) {
-    var g = p.closest(".group");
-    var s = g ? parseInt(g.getAttribute("data-stage") || "0", 10) : 0;
+    var s = stageOf(p);
     if (s > 0 && stages.indexOf(s) === -1) stages.push(s);
   });
   stages.sort(function (a, b) { return a - b; });
@@ -41,6 +53,7 @@
   var watchdog = null;
   var running = false;
   var ready = false;
+  var handoffAt = Infinity;   // seconds; filled in from panels.json
 
   function clearTimers() {
     timers.forEach(clearTimeout);
@@ -50,15 +63,19 @@
 
   function setLit(stage, on) {
     panes.forEach(function (p) {
-      var g = p.closest(".group");
-      var s = g ? parseInt(g.getAttribute("data-stage") || "0", 10) : 0;
-      if (s === stage) p.classList.toggle("lit", on);
+      if (stageOf(p) === stage) p.classList.toggle("lit", on);
     });
     arrows.forEach(function (a) {
       if (a.classList.contains("always")) return;
-      var s = parseInt(a.getAttribute("data-stage") || "0", 10);
-      if (s === stage) a.classList.toggle("lit", on);
+      if (parseInt(a.getAttribute("data-stage") || "0", 10) === stage) {
+        a.classList.toggle("lit", on);
+      }
     });
+  }
+
+  function setHandoff(on) {
+    flow.classList.toggle("handoff", on);
+    if (titleEl) titleEl.textContent = on ? HAND_LABEL : NAV_LABEL;
   }
 
   function freeze() {
@@ -67,6 +84,7 @@
       try { v.pause(); v.currentTime = 0; } catch (e) {}
     });
     stages.forEach(function (s) { setLit(s, false); });
+    setHandoff(false);
     // The always-on group never dims.
     panes.forEach(function (p) {
       var g = p.closest(".group");
@@ -82,13 +100,14 @@
     watchdog = setInterval(function () {
       if (master.paused) return;
       var t = master.currentTime;
+      setHandoff(t >= handoffAt);
       videos.forEach(function (v) {
         if (v === master || v.seeking) return;
         if (Math.abs(v.currentTime - t) > DRIFT_S) {
           try { v.currentTime = t; } catch (e) {}
         }
       });
-    }, 500);
+    }, 250);
   }
 
   function run() {
@@ -106,6 +125,16 @@
     videos.forEach(function (v) { try { v.pause(); } catch (e) {} });
     timers.push(setTimeout(function () { if (running) run(); }, HOLD_MS));
   });
+
+  // ---- manifest: where the handoff falls -----------------------------------
+  fetch("assets/panels/panels.json", { cache: "no-cache" })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (m) {
+      if (m && m.fps && typeof m.handoff_index === "number") {
+        handoffAt = m.handoff_index / m.fps;
+      }
+    })
+    .catch(function () {});
 
   // ---- load ---------------------------------------------------------------
   var pending = videos.length;

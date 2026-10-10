@@ -118,9 +118,53 @@
   </div>
 </section>
 
-<section class="section alt" id="rollout">
+<section class="section alt" id="compare">
   <div class="wrap">
-    <h2>Full rollout</h2>
+    <h2>Same start, three systems</h2>
+    <p class="lede">
+      These are cells from the 120-seed campaign where <b>ASCENT succeeded and
+      both baselines failed from the identical start pose</b> &mdash; the three
+      clips below are the same pose, the same scene, the same frozen
+      &pi;<sub>0.5</sub>, filmed from one fixed room camera.
+      <b>N2M</b> predicts a single stance and goes to it; <b>&pi;<sub>0.5</sub>
+      alone</b> never repositions at all.
+    </p>
+
+    <div class="chips" role="tablist" aria-label="start pose"></div>
+
+    <div class="cmp-row">
+      <figure class="cmp" data-system="ascent">
+        <div class="cmp-head"><span class="name">ASCENT <em>(ours)</em></span><span class="badge"></span></div>
+        <video muted playsinline preload="auto"></video>
+        <figcaption>predicts where to stand, then hands off</figcaption>
+      </figure>
+      <figure class="cmp" data-system="n2m">
+        <div class="cmp-head"><span class="name">N2M</span><span class="badge"></span></div>
+        <video muted playsinline preload="auto"></video>
+        <figcaption>one predicted stance, straight line to it</figcaption>
+      </figure>
+      <figure class="cmp" data-system="purepi05">
+        <div class="cmp-head"><span class="name">&pi;<sub>0.5</sub> only</span><span class="badge"></span></div>
+        <video muted playsinline preload="auto"></video>
+        <figcaption>no repositioning at all</figcaption>
+      </figure>
+    </div>
+
+    <p class="cmp-note"></p>
+    <p class="fineprint">
+      N2M outputs a stance, not a path, so its evaluation teleports; here the
+      base is interpolated along the straight line to that <em>same</em> stance,
+      which leaves the outcome unchanged. &pi;<sub>0.5</sub> action sampling is
+      stochastic, so a single rollout can differ from the campaign average;
+      every cell shown here was re-run and kept only if the baseline failure
+      reproduced each time.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="rollout">
+  <div class="wrap">
+    <h2>Full rollout, with an obstacle</h2>
     <p class="lede">Approach, detour around the obstacle, gate handoff, and the frozen &pi;<sub>0.5</sub> expert closing the door.</p>
     <div class="videoframe">
       <video controls muted playsinline preload="metadata" poster="assets/img/rollout-poster.jpg">
@@ -137,5 +181,6 @@
 </footer>
 
 <script src="assets/js/pipeline.js"></script>
+<script src="assets/js/compare.js"></script>
 </body>
 </html>

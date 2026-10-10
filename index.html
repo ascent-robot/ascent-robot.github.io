@@ -158,9 +158,14 @@
       &pi;<sub>0.5</sub>'s action sampling is stochastic, so any single rollout
       can disagree with the 120-seed campaign it was drawn from &mdash; in our
       re-runs both baselines occasionally succeeded on a cell the campaign
-      recorded as a failure. Every cell shown here was therefore re-run at least
-      three times <em>per baseline</em> and kept only where both failed every
-      time; candidates that flipped even once were dropped.
+      recorded as a failure. Every cell here was therefore re-run at least three
+      times <em>per baseline</em> and kept only where both failed every time;
+      <b>of 39 candidates screened this way, 3 survived</b>. That low rate is
+      itself the honest result: on any one start pose a baseline's failure is
+      usually a coin flip, which is why the headline numbers are averages over
+      120 seeds rather than picked episodes.
+      The ASCENT clip replays that cell's recorded campaign episode; the two
+      baseline clips are fresh rollouts from the same start pose.
     </p>
   </div>
 </section>

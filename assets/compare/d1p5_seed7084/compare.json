@@ -1,0 +1,24 @@
+{
+ "cell": "d1p5_seed7084",
+ "n_frames": 250,
+ "fps": 10,
+ "duration_s": 25.0,
+ "systems": {
+  "ascent": {
+   "label": "ASCENT (ours)",
+   "success": true
+  },
+  "n2m": {
+   "label": "N2M",
+   "success": false,
+   "approach_frames": 49,
+   "n2m_step_m": 1.1765600009793682
+  },
+  "purepi05": {
+   "label": "pi0.5 only",
+   "success": false,
+   "approach_frames": 1,
+   "n2m_step_m": null
+  }
+ }
+}

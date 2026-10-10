@@ -154,10 +154,13 @@
     <p class="fineprint">
       N2M outputs a stance, not a path, so its evaluation teleports; here the
       base is interpolated along the straight line to that <em>same</em> stance,
-      which leaves the outcome unchanged. &pi;<sub>0.5</sub> action sampling is
-      stochastic, so a single rollout can differ from the campaign average;
-      every cell shown here was re-run and kept only if the baseline failure
-      reproduced each time.
+      which leaves the outcome unchanged.
+      &pi;<sub>0.5</sub>'s action sampling is stochastic, so any single rollout
+      can disagree with the 120-seed campaign it was drawn from &mdash; in our
+      re-runs both baselines occasionally succeeded on a cell the campaign
+      recorded as a failure. Every cell shown here was therefore re-run at least
+      three times <em>per baseline</em> and kept only where both failed every
+      time; candidates that flipped even once were dropped.
     </p>
   </div>
 </section>

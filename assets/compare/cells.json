@@ -1,0 +1,19 @@
+{
+ "task": "CloseFridge",
+ "cells": [
+  {
+   "dir": "d2p5_seed7026",
+   "label": "2.5 m  \u00b7  seed 7026",
+   "distance": 2.5,
+   "seed": 7026,
+   "note": "Start 2.5 m from the fixture. ASCENT closes the door; N2M goes to its predicted stance and cannot reach; \u03c00.5 alone never finds one."
+  },
+  {
+   "dir": "d2p5_seed7075",
+   "label": "2.5 m  \u00b7  seed 7075",
+   "distance": 2.5,
+   "seed": 7075,
+   "note": "Start 2.5 m from the fixture. ASCENT closes the door; N2M goes to its predicted stance and cannot reach; \u03c00.5 alone never finds one."
+  }
+ ]
+}

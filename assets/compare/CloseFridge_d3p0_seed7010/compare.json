@@ -1,0 +1,24 @@
+{
+ "cell": "CloseFridge_d3p0_seed7010",
+ "n_frames": 253,
+ "fps": 10,
+ "duration_s": 25.3,
+ "systems": {
+  "ascent": {
+   "label": "ASCENT (ours)",
+   "success": true
+  },
+  "n2m": {
+   "label": "N2M",
+   "success": false,
+   "approach_frames": null,
+   "n2m_step_m": null
+  },
+  "purepi05": {
+   "label": "pi0.5 only",
+   "success": false,
+   "approach_frames": null,
+   "n2m_step_m": null
+  }
+ }
+}

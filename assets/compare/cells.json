@@ -1,26 +1,331 @@
 {
- "task": "CloseFridge",
- "cells": [
+ "tasks": [
   {
-   "dir": "d2p5_seed7026",
-   "label": "2.5 m  \u00b7  seed 7026",
-   "distance": 2.5,
-   "seed": 7026,
-   "note": ""
+   "task": "CloseDishwasher",
+   "label": "Close Dishwasher",
+   "cells": [
+    {
+     "dir": "CloseDishwasher_d3p0_seed7005",
+     "distance": 3.0,
+     "seed": 7005,
+     "label": "3 m \u00b7 7005",
+     "frames": 213,
+     "duration_s": 21.3,
+     "has_p": false
+    },
+    {
+     "dir": "CloseDishwasher_d3p0_seed7015",
+     "distance": 3.0,
+     "seed": 7015,
+     "label": "3 m \u00b7 7015",
+     "frames": 230,
+     "duration_s": 23.0,
+     "has_p": false
+    },
+    {
+     "dir": "CloseDishwasher_d3p0_seed7018",
+     "distance": 3.0,
+     "seed": 7018,
+     "label": "3 m \u00b7 7018",
+     "frames": 220,
+     "duration_s": 22.0,
+     "has_p": false
+    },
+    {
+     "dir": "CloseDishwasher_d2p5_seed7019",
+     "distance": 2.5,
+     "seed": 7019,
+     "label": "2.5 m \u00b7 7019",
+     "frames": 248,
+     "duration_s": 24.8,
+     "has_p": false
+    },
+    {
+     "dir": "CloseDishwasher_d2p0_seed7052",
+     "distance": 2.0,
+     "seed": 7052,
+     "label": "2 m \u00b7 7052",
+     "frames": 251,
+     "duration_s": 25.1,
+     "has_p": false
+    }
+   ]
   },
   {
-   "dir": "d2p5_seed7075",
-   "label": "2.5 m  \u00b7  seed 7075",
-   "distance": 2.5,
-   "seed": 7075,
-   "note": ""
+   "task": "CloseFridge",
+   "label": "Close Fridge",
+   "cells": [
+    {
+     "dir": "CloseFridge_d3p0_seed7001",
+     "distance": 3.0,
+     "seed": 7001,
+     "label": "3 m \u00b7 7001",
+     "frames": 290,
+     "duration_s": 29.0,
+     "has_p": true
+    },
+    {
+     "dir": "CloseFridge_d3p0_seed7010",
+     "distance": 3.0,
+     "seed": 7010,
+     "label": "3 m \u00b7 7010",
+     "frames": 253,
+     "duration_s": 25.3,
+     "has_p": true
+    },
+    {
+     "dir": "CloseFridge_d3p0_seed7033",
+     "distance": 3.0,
+     "seed": 7033,
+     "label": "3 m \u00b7 7033",
+     "frames": 243,
+     "duration_s": 24.3,
+     "has_p": true
+    },
+    {
+     "dir": "CloseFridge_d2p5_seed7052",
+     "distance": 2.5,
+     "seed": 7052,
+     "label": "2.5 m \u00b7 7052",
+     "frames": 300,
+     "duration_s": 30.0,
+     "has_p": true
+    },
+    {
+     "dir": "CloseFridge_d2p5_seed7075",
+     "distance": 2.5,
+     "seed": 7075,
+     "label": "2.5 m \u00b7 7075",
+     "frames": 257,
+     "duration_s": 25.7,
+     "has_p": true
+    },
+    {
+     "dir": "CloseFridge_d2p0_seed7073",
+     "distance": 2.0,
+     "seed": 7073,
+     "label": "2 m \u00b7 7073",
+     "frames": 255,
+     "duration_s": 25.5,
+     "has_p": true
+    }
+   ]
   },
   {
-   "dir": "d1p5_seed7084",
-   "label": "1.5 m  \u00b7  seed 7084",
-   "distance": 1.5,
-   "seed": 7084,
-   "note": ""
+   "task": "CloseFridgeDrawer",
+   "label": "Close FridgeDrawer",
+   "cells": [
+    {
+     "dir": "CloseFridgeDrawer_d3p0_seed7055",
+     "distance": 3.0,
+     "seed": 7055,
+     "label": "3 m \u00b7 7055",
+     "frames": 223,
+     "duration_s": 22.3,
+     "has_p": false
+    },
+    {
+     "dir": "CloseFridgeDrawer_d3p0_seed7072",
+     "distance": 3.0,
+     "seed": 7072,
+     "label": "3 m \u00b7 7072",
+     "frames": 244,
+     "duration_s": 24.4,
+     "has_p": false
+    },
+    {
+     "dir": "CloseFridgeDrawer_d3p0_seed7111",
+     "distance": 3.0,
+     "seed": 7111,
+     "label": "3 m \u00b7 7111",
+     "frames": 214,
+     "duration_s": 21.4,
+     "has_p": false
+    },
+    {
+     "dir": "CloseFridgeDrawer_d2p5_seed7012",
+     "distance": 2.5,
+     "seed": 7012,
+     "label": "2.5 m \u00b7 7012",
+     "frames": 220,
+     "duration_s": 22.0,
+     "has_p": false
+    },
+    {
+     "dir": "CloseFridgeDrawer_d2p5_seed7019",
+     "distance": 2.5,
+     "seed": 7019,
+     "label": "2.5 m \u00b7 7019",
+     "frames": 215,
+     "duration_s": 21.5,
+     "has_p": false
+    },
+    {
+     "dir": "CloseFridgeDrawer_d2p5_seed7093",
+     "distance": 2.5,
+     "seed": 7093,
+     "label": "2.5 m \u00b7 7093",
+     "frames": 217,
+     "duration_s": 21.7,
+     "has_p": false
+    },
+    {
+     "dir": "CloseFridgeDrawer_d2p0_seed7040",
+     "distance": 2.0,
+     "seed": 7040,
+     "label": "2 m \u00b7 7040",
+     "frames": 223,
+     "duration_s": 22.3,
+     "has_p": false
+    },
+    {
+     "dir": "CloseFridgeDrawer_d2p0_seed7050",
+     "distance": 2.0,
+     "seed": 7050,
+     "label": "2 m \u00b7 7050",
+     "frames": 243,
+     "duration_s": 24.3,
+     "has_p": false
+    },
+    {
+     "dir": "CloseFridgeDrawer_d2p0_seed7109",
+     "distance": 2.0,
+     "seed": 7109,
+     "label": "2 m \u00b7 7109",
+     "frames": 222,
+     "duration_s": 22.2,
+     "has_p": false
+    },
+    {
+     "dir": "CloseFridgeDrawer_d1p5_seed7055",
+     "distance": 1.5,
+     "seed": 7055,
+     "label": "1.5 m \u00b7 7055",
+     "frames": 246,
+     "duration_s": 24.6,
+     "has_p": false
+    },
+    {
+     "dir": "CloseFridgeDrawer_d1p5_seed7113",
+     "distance": 1.5,
+     "seed": 7113,
+     "label": "1.5 m \u00b7 7113",
+     "frames": 233,
+     "duration_s": 23.3,
+     "has_p": false
+    },
+    {
+     "dir": "CloseFridgeDrawer_d1p0_seed7004",
+     "distance": 1.0,
+     "seed": 7004,
+     "label": "1 m \u00b7 7004",
+     "frames": 243,
+     "duration_s": 24.3,
+     "has_p": false
+    },
+    {
+     "dir": "CloseFridgeDrawer_d1p0_seed7113",
+     "distance": 1.0,
+     "seed": 7113,
+     "label": "1 m \u00b7 7113",
+     "frames": 231,
+     "duration_s": 23.1,
+     "has_p": false
+    }
+   ]
+  },
+  {
+   "task": "CloseMicrowave",
+   "label": "Close Microwave",
+   "cells": [
+    {
+     "dir": "CloseMicrowave_d3p0_seed7061",
+     "distance": 3.0,
+     "seed": 7061,
+     "label": "3 m \u00b7 7061",
+     "frames": 255,
+     "duration_s": 25.5,
+     "has_p": false
+    },
+    {
+     "dir": "CloseMicrowave_d2p5_seed7061",
+     "distance": 2.5,
+     "seed": 7061,
+     "label": "2.5 m \u00b7 7061",
+     "frames": 250,
+     "duration_s": 25.0,
+     "has_p": false
+    },
+    {
+     "dir": "CloseMicrowave_d2p5_seed7103",
+     "distance": 2.5,
+     "seed": 7103,
+     "label": "2.5 m \u00b7 7103",
+     "frames": 285,
+     "duration_s": 28.5,
+     "has_p": false
+    },
+    {
+     "dir": "CloseMicrowave_d2p0_seed7027",
+     "distance": 2.0,
+     "seed": 7027,
+     "label": "2 m \u00b7 7027",
+     "frames": 254,
+     "duration_s": 25.4,
+     "has_p": false
+    },
+    {
+     "dir": "CloseMicrowave_d2p0_seed7066",
+     "distance": 2.0,
+     "seed": 7066,
+     "label": "2 m \u00b7 7066",
+     "frames": 232,
+     "duration_s": 23.2,
+     "has_p": false
+    },
+    {
+     "dir": "CloseMicrowave_d1p0_seed7111",
+     "distance": 1.0,
+     "seed": 7111,
+     "label": "1 m \u00b7 7111",
+     "frames": 223,
+     "duration_s": 22.3,
+     "has_p": false
+    }
+   ]
+  },
+  {
+   "task": "CloseOven",
+   "label": "Close Oven",
+   "cells": [
+    {
+     "dir": "CloseOven_d1p0_seed7021",
+     "distance": 1.0,
+     "seed": 7021,
+     "label": "1 m \u00b7 7021",
+     "frames": 236,
+     "duration_s": 23.6,
+     "has_p": false
+    },
+    {
+     "dir": "CloseOven_d1p0_seed7076",
+     "distance": 1.0,
+     "seed": 7076,
+     "label": "1 m \u00b7 7076",
+     "frames": 251,
+     "duration_s": 25.1,
+     "has_p": false
+    },
+    {
+     "dir": "CloseOven_d1p0_seed7111",
+     "distance": 1.0,
+     "seed": 7111,
+     "label": "1 m \u00b7 7111",
+     "frames": 217,
+     "duration_s": 21.7,
+     "has_p": false
+    }
+   ]
   }
  ]
 }

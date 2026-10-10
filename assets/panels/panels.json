@@ -1,0 +1,22 @@
+{
+ "panels": [
+  "cam_left",
+  "cam_right",
+  "t",
+  "s",
+  "c",
+  "p",
+  "topdown"
+ ],
+ "n_nav": 109,
+ "n_manip": 96,
+ "n_frames": 205,
+ "handoff_index": 108,
+ "fps": 10,
+ "panel_px": 384,
+ "cam_px": 384,
+ "tag": "job_27869239_seed7036_showcase_yaw25p",
+ "task": "CloseFridge",
+ "start_frame": 0,
+ "placeholder": false
+}

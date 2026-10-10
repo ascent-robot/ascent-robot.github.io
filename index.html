@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASCENT</title>
+<meta name="description" content="Learning where to stand so a frozen manipulation policy can succeed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="venue">Preprint</p>
+    <h1>ASCENT</h1>
+    <p class="subtitle">Learning <em>where to stand</em> so a frozen manipulation policy can succeed</p>
+    <p class="authors">Siyuan Zheng</p>
+    <p class="affil">University of Michigan</p>
+    <nav class="links">
+      <a class="btn" href="#">Paper</a>
+      <a class="btn" href="#">arXiv</a>
+      <a class="btn" href="https://github.com/zsiyuan-eng/spar-vla">Code</a>
+      <a class="btn" href="#pipeline">Video</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section" id="pipeline">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="lede">
+      Two onboard RGB views are the only input. The network lifts them into a
+      bird's-eye frame and predicts three fields &mdash; where the target is
+      (<b>T</b>), where the frozen policy would succeed from (<b>S</b>), and what
+      is traversable (<b>C</b>). A geodesic controller turns those into a single
+      potential <b>P</b>, and the robot climbs it.
+    </p>
+
+    <figure class="stage" id="stage">
+      <div class="stage-head">
+        <span class="stage-title">Perception &rarr; fields &rarr; potential</span>
+        <div class="stage-ctl">
+          <button id="replay" class="ctl" type="button" aria-label="Replay the sequence">Replay</button>
+        </div>
+      </div>
+
+      <div class="flow" id="flow">
+
+        <div class="group" data-stage="1">
+          <div class="group-label">onboard RGB</div>
+          <div class="panes">
+            <div class="pane cam" data-panel="cam_left">
+              <video muted playsinline preload="auto" data-src="assets/panels/cam_left.mp4"></video>
+              <span class="tag">agentview left</span>
+            </div>
+            <div class="pane cam" data-panel="cam_right">
+              <video muted playsinline preload="auto" data-src="assets/panels/cam_right.mp4"></video>
+              <span class="tag">agentview right</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="arrow" data-stage="2" aria-hidden="true"><span></span></div>
+
+        <div class="group" data-stage="2">
+          <div class="group-label">predicted fields (BEV)</div>
+          <div class="panes">
+            <div class="pane field" data-panel="t">
+              <video muted playsinline preload="auto" data-src="assets/panels/t.mp4"></video>
+              <span class="tag"><b>T</b> target</span>
+            </div>
+            <div class="pane field" data-panel="s">
+              <video muted playsinline preload="auto" data-src="assets/panels/s.mp4"></video>
+              <span class="tag"><b>S</b> success</span>
+            </div>
+            <div class="pane field" data-panel="c">
+              <video muted playsinline preload="auto" data-src="assets/panels/c.mp4"></video>
+              <span class="tag"><b>C</b> traversable</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="arrow" data-stage="3" aria-hidden="true"><span></span></div>
+
+        <div class="group" data-stage="3">
+          <div class="group-label">geodesic potential</div>
+          <div class="panes">
+            <div class="pane field big" data-panel="p">
+              <video muted playsinline preload="auto" data-src="assets/panels/p.mp4"></video>
+              <span class="tag"><b>P</b> potential</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="arrow always" aria-hidden="true"><span></span></div>
+
+        <div class="group always" data-stage="0">
+          <div class="group-label">the scene</div>
+          <div class="panes">
+            <div class="pane top" data-panel="topdown">
+              <video muted playsinline preload="auto" data-src="assets/panels/topdown.mp4"></video>
+              <span class="tag">top-down</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <figcaption>
+        The robot starts turned away from the fridge, so <b>T</b> begins at the
+        edge of the frame and has to swing onto the target before <b>P</b> points
+        anywhere useful. An obstacle sits between the start pose and the fixture.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section alt" id="rollout">
+  <div class="wrap">
+    <h2>Full rollout</h2>
+    <p class="lede">Approach, detour around the obstacle, gate handoff, and the frozen &pi;<sub>0.5</sub> expert closing the door.</p>
+    <div class="videoframe">
+      <video controls muted playsinline preload="metadata" poster="assets/img/rollout-poster.jpg">
+        <source src="assets/video/with-obs.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>University of Michigan &middot; <a href="https://github.com/zsiyuan-eng/spar-vla">Code</a></p>
+  </div>
+</footer>
+
+<script src="assets/js/pipeline.js"></script>
+</body>
+</html>

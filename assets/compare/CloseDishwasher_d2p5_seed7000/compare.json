@@ -1,0 +1,30 @@
+{
+ "task": "CloseDishwasher",
+ "cell": "d2p5_seed7000",
+ "n_frames": 273,
+ "fps": 10,
+ "duration_s": 27.3,
+ "systems": {
+  "ascent": {
+   "label": "ASCENT (ours)",
+   "success": true,
+   "approach_frames": 181,
+   "n2m_step_m": null,
+   "pi05_steps": 181
+  },
+  "n2m": {
+   "label": "N2M",
+   "success": false,
+   "approach_frames": 43,
+   "n2m_step_m": 1.0331562707408304,
+   "pi05_steps": 400
+  },
+  "purepi05": {
+   "label": "pi0.5 only",
+   "success": false,
+   "approach_frames": 1,
+   "n2m_step_m": null,
+   "pi05_steps": 400
+  }
+ }
+}

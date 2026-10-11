@@ -1,0 +1,30 @@
+{
+ "task": "CloseFridgeDrawer",
+ "cell": "d1p0_seed7104",
+ "n_frames": 212,
+ "fps": 10,
+ "duration_s": 21.2,
+ "systems": {
+  "ascent": {
+   "label": "ASCENT (ours)",
+   "success": true,
+   "approach_frames": 67,
+   "n2m_step_m": null,
+   "pi05_steps": 100
+  },
+  "n2m": {
+   "label": "N2M",
+   "success": false,
+   "approach_frames": 11,
+   "n2m_step_m": 0.24370318358059517,
+   "pi05_steps": 400
+  },
+  "purepi05": {
+   "label": "pi0.5 only",
+   "success": false,
+   "approach_frames": 1,
+   "n2m_step_m": null,
+   "pi05_steps": 400
+  }
+ }
+}

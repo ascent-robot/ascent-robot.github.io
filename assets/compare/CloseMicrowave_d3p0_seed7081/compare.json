@@ -1,0 +1,30 @@
+{
+ "task": "CloseMicrowave",
+ "cell": "d3p0_seed7081",
+ "n_frames": 287,
+ "fps": 10,
+ "duration_s": 28.7,
+ "systems": {
+  "ascent": {
+   "label": "ASCENT (ours)",
+   "success": true,
+   "approach_frames": 211,
+   "n2m_step_m": null,
+   "pi05_steps": 150
+  },
+  "n2m": {
+   "label": "N2M",
+   "success": false,
+   "approach_frames": 49,
+   "n2m_step_m": 1.1955899160106405,
+   "pi05_steps": 400
+  },
+  "purepi05": {
+   "label": "pi0.5 only",
+   "success": false,
+   "approach_frames": 1,
+   "n2m_step_m": null,
+   "pi05_steps": 400
+  }
+ }
+}

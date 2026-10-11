@@ -1,0 +1,30 @@
+{
+ "task": "CloseOven",
+ "cell": "d2p5_seed7071",
+ "n_frames": 239,
+ "fps": 10,
+ "duration_s": 23.9,
+ "systems": {
+  "ascent": {
+   "label": "ASCENT (ours)",
+   "success": true,
+   "approach_frames": 175,
+   "n2m_step_m": null,
+   "pi05_steps": 126
+  },
+  "n2m": {
+   "label": "N2M",
+   "success": false,
+   "approach_frames": 35,
+   "n2m_step_m": 0.8402847801803092,
+   "pi05_steps": 400
+  },
+  "purepi05": {
+   "label": "pi0.5 only",
+   "success": false,
+   "approach_frames": 1,
+   "n2m_step_m": null,
+   "pi05_steps": 400
+  }
+ }
+}

@@ -1,24 +1,30 @@
 {
- "cell": "CloseFridge_d2p5_seed7052",
- "n_frames": 300,
+ "task": "CloseFridge",
+ "cell": "d2p5_seed7052",
+ "n_frames": 305,
  "fps": 10,
- "duration_s": 30.0,
+ "duration_s": 30.5,
  "systems": {
   "ascent": {
    "label": "ASCENT (ours)",
-   "success": true
+   "success": true,
+   "approach_frames": 259,
+   "n2m_step_m": null,
+   "pi05_steps": 89
   },
   "n2m": {
    "label": "N2M",
    "success": false,
-   "approach_frames": null,
-   "n2m_step_m": null
+   "approach_frames": 55,
+   "n2m_step_m": 1.3409887586034062,
+   "pi05_steps": 400
   },
   "purepi05": {
    "label": "pi0.5 only",
    "success": false,
-   "approach_frames": null,
-   "n2m_step_m": null
+   "approach_frames": 1,
+   "n2m_step_m": null,
+   "pi05_steps": 400
   }
  }
 }

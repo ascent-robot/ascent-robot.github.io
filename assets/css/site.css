@@ -211,3 +211,16 @@ footer{padding:34px 0;text-align:center;color:var(--muted);font-size:14px}
 .tab:hover{border-color:#b9c2cd;color:var(--fg)}
 .tab.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .cmp-meta{margin:14px 0 0;color:var(--muted);font:400 12px/1.5 var(--mono)}
+
+/* 2x speed badge, bottom-right of each comparison clip */
+.vwrap{position:relative;line-height:0}
+.vwrap video{display:block;width:100%;height:auto;background:#05070a}
+.rate{
+  position:absolute;right:8px;bottom:8px;
+  font:600 10px/1 var(--mono);letter-spacing:.06em;color:#e7ecf2;
+  background:rgba(4,7,11,.78);padding:4px 7px;border-radius:5px;
+  pointer-events:none;
+}
+.stage .rate{right:10px;bottom:10px}
+.stage{position:relative}
+.stage-rate{right:12px;bottom:12px}

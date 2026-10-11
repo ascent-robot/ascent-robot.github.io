@@ -1,24 +1,30 @@
 {
- "cell": "CloseOven_d1p0_seed7076",
- "n_frames": 251,
+ "task": "CloseOven",
+ "cell": "d1p0_seed7076",
+ "n_frames": 244,
  "fps": 10,
- "duration_s": 25.1,
+ "duration_s": 24.4,
  "systems": {
   "ascent": {
    "label": "ASCENT (ours)",
-   "success": true
+   "success": true,
+   "approach_frames": 67,
+   "n2m_step_m": null,
+   "pi05_steps": 335
   },
   "n2m": {
    "label": "N2M",
    "success": false,
-   "approach_frames": null,
-   "n2m_step_m": null
+   "approach_frames": 43,
+   "n2m_step_m": 1.0327332400121614,
+   "pi05_steps": 400
   },
   "purepi05": {
    "label": "pi0.5 only",
    "success": false,
-   "approach_frames": null,
-   "n2m_step_m": null
+   "approach_frames": 1,
+   "n2m_step_m": null,
+   "pi05_steps": 400
   }
  }
 }

@@ -20,6 +20,7 @@
   var REVEAL_MS = 400;   // gap between groups lighting up
   var HOLD_MS   = 1100;  // pause on the last frame before looping
   var DRIFT_S   = 0.08;  // resync threshold, seconds
+  var PLAYBACK_RATE = 2.0;
 
   var NAV_LABEL  = "Perception → fields → potential";
   var HAND_LABEL = "Gate handoff — fields frozen, π₀.₅ drives the arm";
@@ -94,6 +95,7 @@
 
   function playAll() {
     videos.forEach(function (v) {
+      try { v.playbackRate = PLAYBACK_RATE; } catch (e) {}
       var q = v.play();
       if (q && q.catch) q.catch(function () {});
     });
@@ -180,4 +182,15 @@
 
   var btn = document.getElementById("replay");
   if (btn) btn.addEventListener("click", function () { run(); });
+})();
+
+/* The standalone rollout video is not part of the staged reveal, but it is
+   labelled 2x like the rest, so set its rate whenever it starts. */
+(function () {
+  var v = document.querySelector("#rollout video");
+  if (!v) return;
+  var set = function () { try { v.playbackRate = 2.0; } catch (e) {} };
+  v.addEventListener("loadedmetadata", set);
+  v.addEventListener("play", set);
+  set();
 })();

@@ -1,0 +1,30 @@
+{
+ "task": "CloseFridge",
+ "cell": "d3p0_seed7059",
+ "n_frames": 370,
+ "fps": 10,
+ "duration_s": 37.0,
+ "systems": {
+  "ascent": {
+   "label": "ASCENT (ours)",
+   "success": true,
+   "approach_frames": 313,
+   "n2m_step_m": null,
+   "pi05_steps": 112
+  },
+  "n2m": {
+   "label": "N2M",
+   "success": false,
+   "approach_frames": 29,
+   "n2m_step_m": 0.5971982500781605,
+   "pi05_steps": 400
+  },
+  "purepi05": {
+   "label": "pi0.5 only",
+   "success": false,
+   "approach_frames": 1,
+   "n2m_step_m": null,
+   "pi05_steps": 400
+  }
+ }
+}

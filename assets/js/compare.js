@@ -14,6 +14,7 @@
   var SYSTEMS = ["ascent", "n2m", "purepi05"];
   var DRIFT_S = 0.08;
   var HOLD_MS = 900;
+  var PLAYBACK_RATE = 2.0;
 
   var root = document.getElementById("compare");
   if (!root) return;
@@ -40,7 +41,9 @@
   }
 
   function playAll() {
-    videos.forEach(function (v) { try { v.currentTime = 0; } catch (e) {} });
+    videos.forEach(function (v) {
+      try { v.currentTime = 0; v.playbackRate = PLAYBACK_RATE; } catch (e) {}
+    });
     videos.forEach(function (v) {
       var q = v.play();
       if (q && q.catch) q.catch(function () {});
@@ -87,6 +90,9 @@
     if (metaEl) metaEl.textContent = cell.dir;
     SYSTEMS.forEach(function (s, i) {
       videos[i].src = base + s + ".mp4";
+      // 2x on the page rather than in the encode: the clips stay frame-exact
+      // for any later re-cut, and the rate survives a re-pack.
+      videos[i].playbackRate = PLAYBACK_RATE;
       videos[i].load();
     });
     fetch(base + "compare.json", { cache: "no-cache" })

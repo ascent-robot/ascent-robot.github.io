@@ -1,24 +1,30 @@
 {
- "cell": "CloseDishwasher_d3p0_seed7018",
- "n_frames": 220,
+ "task": "CloseDishwasher",
+ "cell": "d3p0_seed7018",
+ "n_frames": 223,
  "fps": 10,
- "duration_s": 22.0,
+ "duration_s": 22.3,
  "systems": {
   "ascent": {
    "label": "ASCENT (ours)",
-   "success": true
+   "success": true,
+   "approach_frames": 163,
+   "n2m_step_m": null,
+   "pi05_steps": 117
   },
   "n2m": {
    "label": "N2M",
    "success": false,
-   "approach_frames": null,
-   "n2m_step_m": null
+   "approach_frames": 18,
+   "n2m_step_m": 0.4189983531660102,
+   "pi05_steps": 400
   },
   "purepi05": {
    "label": "pi0.5 only",
    "success": false,
-   "approach_frames": null,
-   "n2m_step_m": null
+   "approach_frames": 1,
+   "n2m_step_m": null,
+   "pi05_steps": 400
   }
  }
 }

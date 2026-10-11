@@ -14,13 +14,17 @@
  * count (scripts/replay_level_b_smooth_video.py --dump-panels), so they stay
  * in step; a watchdog nudges any element that drifts.
  */
+/* One rate for every clip on the page; the second IIFE below is a separate
+   scope and cannot see a var declared inside the first. */
+var ASCENT_RATE = 3.0;
+
 (function () {
   "use strict";
 
   var REVEAL_MS = 400;   // gap between groups lighting up
   var HOLD_MS   = 1100;  // pause on the last frame before looping
   var DRIFT_S   = 0.08;  // resync threshold, seconds
-  var PLAYBACK_RATE = 4.0;
+  var PLAYBACK_RATE = ASCENT_RATE;
 
   var NAV_LABEL  = "Perception → fields → potential";
   var HAND_LABEL = "Gate handoff — fields frozen, π₀.₅ drives the arm";
@@ -184,12 +188,12 @@
   if (btn) btn.addEventListener("click", function () { run(); });
 })();
 
-/* The standalone rollout video is not part of the staged reveal, but it is
-   labelled 2x like the rest, so set its rate whenever it starts. */
+/* The standalone rollout video is not part of the staged reveal, but it carries
+   the same rate badge, so set its rate whenever it starts. */
 (function () {
   var v = document.querySelector("#rollout video");
   if (!v) return;
-  var set = function () { try { v.playbackRate = 4.0; } catch (e) {} };
+  var set = function () { try { v.playbackRate = ASCENT_RATE; } catch (e) {} };
   v.addEventListener("loadedmetadata", set);
   v.addEventListener("play", set);
   set();

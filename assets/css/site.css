@@ -159,7 +159,9 @@ footer{padding:34px 0;text-align:center;color:var(--muted);font-size:14px}
 }
 
 /* ---------- three-way comparison ---------- */
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
+.chips{display:flex;flex-direction:column;gap:9px;margin:0 0 20px}
+.band-row{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.band{font:600 12px/1 var(--mono);color:var(--muted);min-width:44px;text-align:right}
 .chip{
   font:500 13px/1 var(--mono);color:var(--muted);background:#fff;
   border:1px solid var(--line);border-radius:999px;padding:8px 15px;cursor:pointer;

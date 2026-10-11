@@ -79,9 +79,10 @@
     var list = tasks[ti].cells;
     if (k < 0 || k >= list.length) return;
     ci = k;
-    Array.prototype.forEach.call(chipsEl.children, function (c, i) {
-      c.classList.toggle("on", i === k);
-      c.setAttribute("aria-selected", i === k ? "true" : "false");
+    Array.prototype.forEach.call(chipsEl.querySelectorAll(".chip"), function (c) {
+      var on = Number(c.dataset.i) === k;
+      c.classList.toggle("on", on);
+      c.setAttribute("aria-selected", on ? "true" : "false");
     });
     stop();
     var my = ++token;
@@ -120,15 +121,31 @@
       c.classList.toggle("on", i === k);
       c.setAttribute("aria-selected", i === k ? "true" : "false");
     });
+    // One row per start distance. With 20+ starts on a task a single wrapped
+    // run of chips is unreadable, and the distance is the first thing you pick
+    // by. Chips carry their index because the rows put non-chip children in
+    // chipsEl and position is no longer the index.
     chipsEl.textContent = "";
+    var row = null, band = null;
     tasks[k].cells.forEach(function (cell, i) {
+      if (row === null || cell.distance !== band) {
+        band = cell.distance;
+        row = document.createElement("div");
+        row.className = "band-row";
+        var lab = document.createElement("span");
+        lab.className = "band";
+        lab.textContent = band + " m";
+        row.appendChild(lab);
+        chipsEl.appendChild(row);
+      }
       var b = document.createElement("button");
       b.type = "button";
       b.className = "chip";
+      b.dataset.i = String(i);
       b.setAttribute("role", "tab");
-      b.textContent = cell.label;
+      b.textContent = String(cell.seed);
       b.addEventListener("click", function () { selectCell(i); });
-      chipsEl.appendChild(b);
+      row.appendChild(b);
     });
     selectCell(0);
   }

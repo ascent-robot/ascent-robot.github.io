@@ -1,22 +1,22 @@
 {
  "task": "CloseDishwasher",
  "cell": "d3p0_seed7018",
- "n_frames": 223,
+ "n_frames": 217,
  "fps": 10,
- "duration_s": 22.3,
+ "duration_s": 21.7,
  "systems": {
   "ascent": {
    "label": "ASCENT (ours)",
    "success": true,
    "approach_frames": 163,
    "n2m_step_m": null,
-   "pi05_steps": 117
+   "pi05_steps": 106
   },
   "n2m": {
    "label": "N2M",
    "success": false,
-   "approach_frames": 18,
-   "n2m_step_m": 0.4189983531660102,
+   "approach_frames": 14,
+   "n2m_step_m": 0.321966340618435,
    "pi05_steps": 400
   },
   "purepi05": {

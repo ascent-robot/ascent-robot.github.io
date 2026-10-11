@@ -14,7 +14,7 @@
   var SYSTEMS = ["ascent", "n2m", "purepi05"];
   var DRIFT_S = 0.08;
   var HOLD_MS = 900;
-  var PLAYBACK_RATE = 2.0;
+  var PLAYBACK_RATE = 4.0;
 
   var root = document.getElementById("compare");
   if (!root) return;

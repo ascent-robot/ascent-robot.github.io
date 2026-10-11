@@ -20,7 +20,7 @@
   var REVEAL_MS = 400;   // gap between groups lighting up
   var HOLD_MS   = 1100;  // pause on the last frame before looping
   var DRIFT_S   = 0.08;  // resync threshold, seconds
-  var PLAYBACK_RATE = 2.0;
+  var PLAYBACK_RATE = 4.0;
 
   var NAV_LABEL  = "Perception → fields → potential";
   var HAND_LABEL = "Gate handoff — fields frozen, π₀.₅ drives the arm";
@@ -189,7 +189,7 @@
 (function () {
   var v = document.querySelector("#rollout video");
   if (!v) return;
-  var set = function () { try { v.playbackRate = 2.0; } catch (e) {} };
+  var set = function () { try { v.playbackRate = 4.0; } catch (e) {} };
   v.addEventListener("loadedmetadata", set);
   v.addEventListener("play", set);
   set();

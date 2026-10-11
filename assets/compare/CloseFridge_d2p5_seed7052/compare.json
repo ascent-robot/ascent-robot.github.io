@@ -1,22 +1,22 @@
 {
  "task": "CloseFridge",
  "cell": "d2p5_seed7052",
- "n_frames": 305,
+ "n_frames": 301,
  "fps": 10,
- "duration_s": 30.5,
+ "duration_s": 30.1,
  "systems": {
   "ascent": {
    "label": "ASCENT (ours)",
    "success": true,
    "approach_frames": 259,
    "n2m_step_m": null,
-   "pi05_steps": 89
+   "pi05_steps": 82
   },
   "n2m": {
    "label": "N2M",
    "success": false,
-   "approach_frames": 55,
-   "n2m_step_m": 1.3409887586034062,
+   "approach_frames": 59,
+   "n2m_step_m": 1.4377094608294252,
    "pi05_steps": 400
   },
   "purepi05": {

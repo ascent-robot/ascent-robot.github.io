@@ -5,6 +5,31 @@
   "open": 0.38
  },
  {
+  "id": "lat-0.0501",
+  "file": "lat-0.0501.mp4",
+  "open": 0.63
+ },
+ {
+  "id": "lat-0.065",
+  "file": "lat-0.065.mp4",
+  "open": 0.92
+ },
+ {
+  "id": "along-0.02_lat-0.05",
+  "file": "along-0.02_lat-0.05.mp4",
+  "open": 0.98
+ },
+ {
+  "id": "along-0.01_lat-0.05",
+  "file": "along-0.01_lat-0.05.mp4",
+  "open": 0.21
+ },
+ {
+  "id": "lat-0.055",
+  "file": "lat-0.055.mp4",
+  "open": 0.11
+ },
+ {
   "id": "shift-0.02",
   "file": "shift-0.02.mp4",
   "open": 0.94

@@ -15,8 +15,8 @@
   "n2m": {
    "label": "N2M",
    "success": false,
-   "approach_frames": 24,
-   "n2m_step_m": 0.5612147334882739,
+   "approach_frames": 27,
+   "n2m_step_m": 0.6371421349065224,
    "pi05_steps": 400
   },
   "purepi05": {

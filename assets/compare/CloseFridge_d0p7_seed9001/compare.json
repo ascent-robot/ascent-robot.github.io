@@ -1,0 +1,48 @@
+{
+ "task": "CloseFridge",
+ "cell": "d0p7_seed9001",
+ "n_frames": 230,
+ "fps": 10,
+ "duration_s": 23.0,
+ "systems": {
+  "ascent": {
+   "label": "ASCENT (ours)",
+   "success": true,
+   "approach_frames": 97,
+   "n2m_step_m": null,
+   "pi05_steps": 138
+  },
+  "n2m": {
+   "label": "N2M",
+   "success": false,
+   "approach_frames": 29,
+   "n2m_step_m": 0.6930733936720239,
+   "pi05_steps": 400
+  },
+  "purepi05": {
+   "label": "pi0.5 only",
+   "success": false,
+   "approach_frames": 1,
+   "n2m_step_m": null,
+   "pi05_steps": 400
+  }
+ },
+ "start": {
+  "xy": [
+   0.75,
+   -1.3
+  ],
+  "facing": "fridge",
+  "picked_by": "user (region left of the fridge)",
+  "distance_to_stance_m": 0.729
+ },
+ "ascent_source": {
+  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/closefridge/level_b_episode/job_27888846_seed7087_circle_0.75_-1.30",
+  "pgeo_inset": true
+ },
+ "tries": {
+  "ascent": 1,
+  "n2m": 1,
+  "purepi05": 1
+ }
+}

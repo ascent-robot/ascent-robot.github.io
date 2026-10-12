@@ -115,6 +115,14 @@
      "label": "1 m \u00b7 7087",
      "frames": 289,
      "duration_s": 28.9
+    },
+    {
+     "dir": "CloseFridge_d0p7_seed9001",
+     "distance": 0.7,
+     "seed": 9001,
+     "label": "0.7 m \u00b7 9001",
+     "frames": 230,
+     "duration_s": 23.0
     }
    ]
   },

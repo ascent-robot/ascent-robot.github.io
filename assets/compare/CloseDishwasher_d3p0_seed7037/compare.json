@@ -1,16 +1,16 @@
 {
  "task": "CloseDishwasher",
  "cell": "d3p0_seed7037",
- "n_frames": 250,
+ "n_frames": 275,
  "fps": 10,
- "duration_s": 25.0,
+ "duration_s": 27.5,
  "systems": {
   "ascent": {
    "label": "ASCENT (ours)",
    "success": true,
-   "approach_frames": 193,
+   "approach_frames": 229,
    "n2m_step_m": null,
-   "pi05_steps": 112
+   "pi05_steps": 89
   },
   "n2m": {
    "label": "N2M",
@@ -26,5 +26,11 @@
    "n2m_step_m": null,
    "pi05_steps": 400
   }
+ },
+ "ascent_source": {
+  "c": "learned (CloseFridge C head)",
+  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/learnedC_rerun_20261011/CloseDishwasher_L35_S29/job_27884592_seed7037_learnedC_d3p0",
+  "render": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/closefridge/05_videos/learnedC/CloseDishwasher/d3p0_seed7037/ascent_try1",
+  "pgeo_inset": true
  }
 }

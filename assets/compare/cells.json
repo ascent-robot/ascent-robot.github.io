@@ -97,8 +97,8 @@
      "distance": 2.0,
      "seed": 7089,
      "label": "2 m \u00b7 7089",
-     "frames": 257,
-     "duration_s": 25.7
+     "frames": 256,
+     "duration_s": 25.6
     },
     {
      "dir": "CloseFridge_d2p0_seed7107",
@@ -175,24 +175,24 @@
      "distance": 2.5,
      "seed": 7081,
      "label": "2.5 m \u00b7 7081",
-     "frames": 232,
-     "duration_s": 23.2
+     "frames": 256,
+     "duration_s": 25.6
     },
     {
      "dir": "CloseFridgeDrawer_d2p5_seed7093",
      "distance": 2.5,
      "seed": 7093,
      "label": "2.5 m \u00b7 7093",
-     "frames": 222,
-     "duration_s": 22.2
+     "frames": 429,
+     "duration_s": 42.9
     },
     {
      "dir": "CloseFridgeDrawer_d2p5_seed7107",
      "distance": 2.5,
      "seed": 7107,
      "label": "2.5 m \u00b7 7107",
-     "frames": 210,
-     "duration_s": 21.0
+     "frames": 300,
+     "duration_s": 30.0
     },
     {
      "dir": "CloseFridgeDrawer_d2p5_seed7118",
@@ -263,8 +263,8 @@
      "distance": 1.0,
      "seed": 7027,
      "label": "1 m \u00b7 7027",
-     "frames": 248,
-     "duration_s": 24.8
+     "frames": 251,
+     "duration_s": 25.1
     },
     {
      "dir": "CloseFridgeDrawer_d1p0_seed7104",
@@ -301,72 +301,72 @@
      "distance": 3.0,
      "seed": 7004,
      "label": "3 m \u00b7 7004",
-     "frames": 270,
-     "duration_s": 27.0
+     "frames": 278,
+     "duration_s": 27.8
     },
     {
      "dir": "CloseMicrowave_d3p0_seed7007",
      "distance": 3.0,
      "seed": 7007,
      "label": "3 m \u00b7 7007",
-     "frames": 260,
-     "duration_s": 26.0
+     "frames": 342,
+     "duration_s": 34.2
     },
     {
      "dir": "CloseMicrowave_d3p0_seed7061",
      "distance": 3.0,
      "seed": 7061,
      "label": "3 m \u00b7 7061",
-     "frames": 282,
-     "duration_s": 28.2
+     "frames": 416,
+     "duration_s": 41.6
     },
     {
      "dir": "CloseMicrowave_d3p0_seed7081",
      "distance": 3.0,
      "seed": 7081,
      "label": "3 m \u00b7 7081",
-     "frames": 287,
-     "duration_s": 28.7
+     "frames": 372,
+     "duration_s": 37.2
     },
     {
      "dir": "CloseMicrowave_d3p0_seed7116",
      "distance": 3.0,
      "seed": 7116,
      "label": "3 m \u00b7 7116",
-     "frames": 274,
-     "duration_s": 27.4
+     "frames": 383,
+     "duration_s": 38.3
     },
     {
      "dir": "CloseMicrowave_d2p5_seed7065",
      "distance": 2.5,
      "seed": 7065,
      "label": "2.5 m \u00b7 7065",
-     "frames": 293,
-     "duration_s": 29.3
+     "frames": 464,
+     "duration_s": 46.4
     },
     {
      "dir": "CloseMicrowave_d2p5_seed7067",
      "distance": 2.5,
      "seed": 7067,
      "label": "2.5 m \u00b7 7067",
-     "frames": 248,
-     "duration_s": 24.8
+     "frames": 425,
+     "duration_s": 42.5
     },
     {
      "dir": "CloseMicrowave_d2p5_seed7111",
      "distance": 2.5,
      "seed": 7111,
      "label": "2.5 m \u00b7 7111",
-     "frames": 369,
-     "duration_s": 36.9
+     "frames": 247,
+     "duration_s": 24.7
     },
     {
      "dir": "CloseMicrowave_d2p0_seed7027",
      "distance": 2.0,
      "seed": 7027,
      "label": "2 m \u00b7 7027",
-     "frames": 235,
-     "duration_s": 23.5
+     "frames": 398,
+     "duration_s": 39.8
     },
     {
      "dir": "CloseMicrowave_d2p0_seed7063",
@@ -445,8 +445,8 @@
      "distance": 0.5,
      "seed": 7071,
      "label": "0.5 m \u00b7 7071",
-     "frames": 234,
-     "duration_s": 23.4
+     "frames": 272,
+     "duration_s": 27.2
     }
    ]
   },
@@ -467,8 +467,8 @@
      "distance": 2.5,
      "seed": 7001,
      "label": "2.5 m \u00b7 7001",
-     "frames": 313,
-     "duration_s": 31.3
+     "frames": 266,
+     "duration_s": 26.6
     },
     {
      "dir": "CloseOven_d2p5_seed7042",
@@ -491,8 +491,8 @@
      "distance": 2.5,
      "seed": 7109,
      "label": "2.5 m \u00b7 7109",
-     "frames": 348,
-     "duration_s": 34.8
+     "frames": 334,
+     "duration_s": 33.4
     },
     {
      "dir": "CloseOven_d2p0_seed7026",
@@ -569,80 +569,80 @@
      "distance": 3.0,
      "seed": 7002,
      "label": "3 m \u00b7 7002",
-     "frames": 243,
-     "duration_s": 24.3
+     "frames": 333,
+     "duration_s": 33.3
     },
     {
      "dir": "CloseDishwasher_d3p0_seed7012",
      "distance": 3.0,
      "seed": 7012,
      "label": "3 m \u00b7 7012",
-     "frames": 261,
-     "duration_s": 26.1
+     "frames": 263,
+     "duration_s": 26.3
     },
     {
      "dir": "CloseDishwasher_d3p0_seed7018",
      "distance": 3.0,
      "seed": 7018,
      "label": "3 m \u00b7 7018",
-     "frames": 217,
-     "duration_s": 21.7
+     "frames": 342,
+     "duration_s": 34.2
     },
     {
      "dir": "CloseDishwasher_d3p0_seed7037",
      "distance": 3.0,
      "seed": 7037,
      "label": "3 m \u00b7 7037",
-     "frames": 250,
-     "duration_s": 25.0
+     "frames": 275,
+     "duration_s": 27.5
     },
     {
      "dir": "CloseDishwasher_d2p5_seed7000",
      "distance": 2.5,
      "seed": 7000,
      "label": "2.5 m \u00b7 7000",
-     "frames": 273,
-     "duration_s": 27.3
+     "frames": 349,
+     "duration_s": 34.9
     },
     {
      "dir": "CloseDishwasher_d2p5_seed7015",
      "distance": 2.5,
      "seed": 7015,
      "label": "2.5 m \u00b7 7015",
-     "frames": 221,
-     "duration_s": 22.1
+     "frames": 355,
+     "duration_s": 35.5
     },
     {
      "dir": "CloseDishwasher_d2p5_seed7019",
      "distance": 2.5,
      "seed": 7019,
      "label": "2.5 m \u00b7 7019",
-     "frames": 247,
-     "duration_s": 24.7
+     "frames": 272,
+     "duration_s": 27.2
     },
     {
      "dir": "CloseDishwasher_d2p5_seed7051",
      "distance": 2.5,
      "seed": 7051,
      "label": "2.5 m \u00b7 7051",
-     "frames": 237,
-     "duration_s": 23.7
+     "frames": 285,
+     "duration_s": 28.5
     },
     {
      "dir": "CloseDishwasher_d2p5_seed7058",
      "distance": 2.5,
      "seed": 7058,
      "label": "2.5 m \u00b7 7058",
-     "frames": 256,
-     "duration_s": 25.6
+     "frames": 257,
+     "duration_s": 25.7
     },
     {
      "dir": "CloseDishwasher_d2p0_seed7039",
      "distance": 2.0,
      "seed": 7039,
      "label": "2 m \u00b7 7039",
-     "frames": 244,
-     "duration_s": 24.4
+     "frames": 401,
+     "duration_s": 40.1
     }
    ]
   }

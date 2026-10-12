@@ -1,16 +1,16 @@
 {
  "task": "CloseOven",
  "cell": "d2p5_seed7001",
- "n_frames": 313,
+ "n_frames": 266,
  "fps": 10,
- "duration_s": 31.3,
+ "duration_s": 26.6,
  "systems": {
   "ascent": {
    "label": "ASCENT (ours)",
    "success": true,
-   "approach_frames": 151,
+   "approach_frames": 193,
    "n2m_step_m": null,
-   "pi05_steps": 322
+   "pi05_steps": 144
   },
   "n2m": {
    "label": "N2M",
@@ -26,5 +26,11 @@
    "n2m_step_m": null,
    "pi05_steps": 400
   }
+ },
+ "ascent_source": {
+  "c": "learned (CloseFridge C head)",
+  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/learnedC_rerun_20261011/CloseOven_L2_S29/job_27884589_seed7001_learnedC_d2p5",
+  "render": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/closefridge/05_videos/learnedC/CloseOven/d2p5_seed7001/ascent_try3",
+  "pgeo_inset": true
  }
 }

@@ -8,9 +8,9 @@
   "ascent": {
    "label": "ASCENT (ours)",
    "success": true,
-   "approach_frames": 109,
+   "approach_frames": 151,
    "n2m_step_m": null,
-   "pi05_steps": 99
+   "pi05_steps": 117
   },
   "n2m": {
    "label": "N2M",
@@ -26,5 +26,11 @@
    "n2m_step_m": null,
    "pi05_steps": 400
   }
+ },
+ "ascent_source": {
+  "c": "learned (CloseFridge C head)",
+  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/learnedC_rerun_20261011/CloseFridgeDrawer_L15_S29/job_27884590_seed7109_learnedC_d2p0",
+  "render": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/closefridge/05_videos/learnedC/CloseFridgeDrawer/d2p0_seed7109/ascent_try2",
+  "pgeo_inset": true
  }
 }

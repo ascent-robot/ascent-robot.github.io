@@ -1,16 +1,16 @@
 {
  "task": "CloseMicrowave",
  "cell": "d3p0_seed7007",
- "n_frames": 260,
+ "n_frames": 342,
  "fps": 10,
- "duration_s": 26.0,
+ "duration_s": 34.2,
  "systems": {
   "ascent": {
    "label": "ASCENT (ours)",
    "success": true,
-   "approach_frames": 187,
+   "approach_frames": 235,
    "n2m_step_m": null,
-   "pi05_steps": 143
+   "pi05_steps": 211
   },
   "n2m": {
    "label": "N2M",
@@ -26,5 +26,11 @@
    "n2m_step_m": null,
    "pi05_steps": 400
   }
+ },
+ "ascent_source": {
+  "c": "learned (CloseFridge C head)",
+  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/learnedC_rerun_20261011/CloseMicrowave/job_27884588_seed7007_learnedC_d3p0",
+  "render": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/closefridge/05_videos/learnedC/CloseMicrowave/d3p0_seed7007/ascent_try2",
+  "pgeo_inset": true
  }
 }

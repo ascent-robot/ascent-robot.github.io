@@ -12,6 +12,7 @@ main{max-width:1180px;margin:0 auto;padding:16px}
 .g{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .g figure{margin:0}.g figcaption{color:var(--muted);font-size:12px;margin:4px 0 0}
 video{width:100%;aspect-ratio:1/1;background:#000;border-radius:6px;display:block}
+.vw{position:relative}.tick{position:absolute;top:8px;right:8px;min-width:28px;padding:3px 7px;border-radius:6px;background:rgba(0,0,0,.62);color:#fff;font:600 14px/1.1 ui-monospace,Menlo,monospace;text-align:center;pointer-events:none}
 @media (max-width:700px){.g{grid-template-columns:1fr}}
 </style></head><body><main id="m"></main>
 <script>
@@ -21,12 +22,15 @@ fetch("candidates.json").then(r=>r.json()).then(rows=>{
   rows.forEach(c=>{
     const d=document.createElement("section"); d.className="row";
     d.innerHTML=`<div class="hd"><button type="button">&#9654;</button><span>${c.id}</span><span style="color:var(--muted);font-weight:400">door ${c.open}</span></div>
-    <div class="g"><figure><video muted playsinline preload="metadata" src="${A}ascent.mp4"></video><figcaption>ASCENT</figcaption></figure>
-    <figure><video muted playsinline preload="metadata" src="${c.file}"></video><figcaption>N2M</figcaption></figure>
-    <figure><video muted playsinline preload="metadata" src="${A}purepi05.mp4"></video><figcaption>&pi;<sub>0.5</sub> only</figcaption></figure></div>`;
+    <div class="g"><figure><div class="vw"><video muted playsinline preload="metadata" src="${A}ascent.mp4"></video><span class="tick">1</span></div><figcaption>ASCENT</figcaption></figure>
+    <figure><div class="vw"><video muted playsinline preload="metadata" src="${c.file}"></video><span class="tick">1</span></div><figcaption>N2M</figcaption></figure>
+    <figure><div class="vw"><video muted playsinline preload="metadata" src="${A}purepi05.mp4"></video><span class="tick">1</span></div><figcaption>&pi;<sub>0.5</sub> only</figcaption></figure></div>`;
     const vs=[...d.querySelectorAll("video")];
     d.querySelector("button").onclick=()=>{vs.forEach(v=>{try{v.pause();v.currentTime=0;v.playbackRate=RATE}catch(e){}});vs.forEach(v=>{const p=v.play();if(p&&p.catch)p.catch(()=>{})})};
     m.appendChild(d);
   });
+  (function loop(){document.querySelectorAll(".vw").forEach(w=>{const v=w.querySelector("video"),t=w.querySelector(".tick");
+    const n=String(Math.floor(Math.floor((v.currentTime||0)*10+1e-6)/9)+1); if(t.textContent!==n)t.textContent=n;});
+    requestAnimationFrame(loop);})();
 });
 </script></body></html>

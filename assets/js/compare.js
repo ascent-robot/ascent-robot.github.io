@@ -30,6 +30,27 @@
   if (videos.some(function (v) { return !v; })) return;
   var master = videos[0];
 
+  // Cut-point counter, top-right of every clip: one number per 9 source frames
+  // (10 fps), i.e. one every 0.3 s of viewing at the 3x playback rate. Read
+  // off the decoded frame each animation frame -- timeupdate fires ~4x/s, which
+  // at 3x would skip numbers.
+  var FRAMES_PER_TICK = 9, SRC_FPS = 10;
+  var ticks = videos.map(function (v) {
+    var t = document.createElement("span");
+    t.className = "tick";
+    t.textContent = "1";
+    v.parentNode.appendChild(t);
+    return t;
+  });
+  (function tickLoop() {
+    videos.forEach(function (v, i) {
+      var f = Math.floor((v.currentTime || 0) * SRC_FPS + 1e-6);
+      var n = String(Math.floor(f / FRAMES_PER_TICK) + 1);
+      if (ticks[i].textContent !== n) ticks[i].textContent = n;
+    });
+    window.requestAnimationFrame(tickLoop);
+  })();
+
   var tasks = [];
   var ti = -1, ci = -1;
   var watchdog = null, loopTimer = null, visible = false, token = 0;

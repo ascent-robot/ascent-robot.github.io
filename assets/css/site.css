@@ -226,3 +226,8 @@ footer{padding:34px 0;text-align:center;color:var(--muted);font-size:14px}
 .stage .rate{right:10px;bottom:10px}
 .stage{position:relative}
 .stage-rate{right:12px;bottom:12px}
+
+/* cut-point counter (compare clips) */
+.tick{position:absolute;top:8px;right:8px;min-width:28px;padding:3px 7px;border-radius:6px;
+  background:rgba(0,0,0,.62);color:#fff;font:600 14px/1.1 "JetBrains Mono",ui-monospace,monospace;
+  text-align:center;pointer-events:none;letter-spacing:.02em}

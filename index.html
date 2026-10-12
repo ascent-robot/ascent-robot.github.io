@@ -20,10 +20,10 @@
     <p class="authors">Siyuan Zheng</p>
     <p class="affil">University of Michigan</p>
     <nav class="links">
-      <a class="btn" href="#">Paper</a>
-      <a class="btn" href="#">arXiv</a>
-      <a class="btn" href="https://github.com/zsiyuan-eng/spar-vla">Code</a>
-      <a class="btn" href="#teaser">Video</a>
+      <span class="btn is-off" aria-disabled="true">Paper</span>
+      <span class="btn is-off" aria-disabled="true">arXiv</span>
+      <span class="btn is-off" aria-disabled="true">Code</span>
+      <span class="btn is-off" aria-disabled="true">Video</span>
     </nav>
   </div>
 </header>
@@ -138,6 +138,12 @@
       Five articulated-object closing tasks. In every example, ASCENT, N2M and &pi;<sub>0.5</sub> only start from
       the same pose in the same randomized kitchen, and all three use the same frozen &pi;<sub>0.5</sub> checkpoint
       for manipulation &mdash; they differ only in where the base is when it starts.
+    </p>
+    <p class="lede center">
+      Run straight from where the robot stands, &pi;<sub>0.5</sub> often misjudges distance: it starts reaching
+      before it is close enough and comes up short. From an unfamiliar viewpoint it can also fail to pick out the
+      appliance and drive off somewhere else. The same weaknesses sink N2M whenever its predicted stance is not
+      a good one.
     </p>
 
   <article class="task" id="closefridge" data-task="CloseFridge">
@@ -494,7 +500,7 @@
 
 <footer>
   <div class="wrap">
-    <p>University of Michigan &middot; <a href="https://github.com/zsiyuan-eng/spar-vla">Code</a></p>
+    <p>University of Michigan</p>
   </div>
 </footer>
 

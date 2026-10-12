@@ -300,3 +300,6 @@ footer{padding:34px 0;text-align:center;color:var(--muted);font-size:14px;border
 @media (prefers-reduced-motion:reduce){
   .pane,.arrow,.step-label,.gate,.verdict,.vbox video{transition:none}
 }
+
+/* links not live yet: shown, but greyed out and not clickable */
+.btn.is-off{background:#e5e7eb;color:#9aa1ad;cursor:default;pointer-events:none;user-select:none}

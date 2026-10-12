@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASCENT · all examples</title>
+<meta name="description" content="Learning where to stand so a frozen manipulation policy can succeed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/archive/site.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="venue">Preprint</p>
+    <h1>ASCENT</h1>
+    <p class="subtitle"></p>
+    <p class="authors">Siyuan Zheng</p>
+    <p class="affil">University of Michigan</p>
+    <nav class="links">
+      <a class="btn" href="#">Paper</a>
+      <a class="btn" href="#">arXiv</a>
+      <a class="btn" href="https://github.com/zsiyuan-eng/spar-vla">Code</a>
+      <a class="btn" href="#pipeline">Video</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section" id="pipeline">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="lede"></p>
+
+    <figure class="stage" id="stage">
+      <div class="stage-head">
+        <span class="stage-title">Perception &rarr; fields &rarr; potential</span>
+        <div class="stage-ctl">
+          <button id="replay" class="ctl" type="button" aria-label="Replay the sequence">Replay</button>
+        </div>
+      </div>
+
+      <div class="flow" id="flow">
+
+        <div class="group g-rgb" data-stage="1">
+          <div class="group-label">onboard RGB</div>
+          <div class="panes">
+            <div class="pane cam" data-panel="cam_left">
+              <video muted playsinline preload="auto" data-src="assets/panels/cam_left.mp4"></video>
+              <span class="tag">agentview left</span>
+            </div>
+            <div class="pane cam" data-panel="cam_right">
+              <video muted playsinline preload="auto" data-src="assets/panels/cam_right.mp4"></video>
+              <span class="tag">agentview right</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="arrow a1 right" data-stage="2" aria-hidden="true"><span></span></div>
+
+        <div class="group g-fld" data-stage="2">
+          <div class="group-label">predicted fields (BEV)</div>
+          <div class="panes">
+            <div class="pane field" data-panel="t">
+              <video muted playsinline preload="auto" data-src="assets/panels/t.mp4"></video>
+              <span class="tag"><b>T</b> target</span>
+            </div>
+            <div class="pane field" data-panel="c">
+              <video muted playsinline preload="auto" data-src="assets/panels/c.mp4"></video>
+              <span class="tag"><b>C</b> traversable</span>
+            </div>
+            <div class="pane field" data-panel="s">
+              <video muted playsinline preload="auto" data-src="assets/panels/s.mp4"></video>
+              <span class="tag"><b>S</b> success</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="arrow a2 down" data-stage="3" aria-hidden="true"><span></span></div>
+
+        <div class="group g-pot" data-stage="3">
+          <div class="group-label">geodesic potential</div>
+          <div class="panes">
+            <div class="pane field big" data-panel="p">
+              <video muted playsinline preload="auto" data-src="assets/panels/p.mp4"></video>
+              <span class="tag"><b>P</b> potential</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="arrow a3 left always" aria-hidden="true"><span></span></div>
+
+        <div class="group g-top always" data-stage="0">
+          <div class="group-label">the scene</div>
+          <div class="panes">
+            <div class="pane top" data-panel="topdown">
+              <video muted playsinline preload="auto" data-src="assets/panels/topdown.mp4"></video>
+              <span class="tag">top-down</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <figcaption></figcaption>
+      <span class="rate stage-rate">3&times;</span>
+    </figure>
+  </div>
+</section>
+
+<section class="section alt" id="compare">
+  <div class="wrap">
+    <h2>Same start, three systems</h2>
+    <p class="lede">
+      Same start pose, same scene, same frozen &pi;<sub>0.5</sub>,
+      one fixed room camera.
+    </p>
+
+    <div class="tasks" role="tablist" aria-label="task"></div>
+    <div class="chips" role="tablist" aria-label="start pose"></div>
+
+    <div class="cmp-row">
+      <figure class="cmp" data-system="ascent">
+        <div class="cmp-head"><span class="name">ASCENT <em>(ours)</em></span><span class="badge"></span></div>
+        <div class="vwrap"><video muted playsinline preload="auto"></video><span class="rate">3&times;</span></div>
+        <figcaption></figcaption>
+      </figure>
+      <figure class="cmp" data-system="n2m">
+        <div class="cmp-head"><span class="name">N2M</span><span class="badge"></span></div>
+        <div class="vwrap"><video muted playsinline preload="auto"></video><span class="rate">3&times;</span></div>
+        <figcaption></figcaption>
+      </figure>
+      <figure class="cmp" data-system="purepi05">
+        <div class="cmp-head"><span class="name">&pi;<sub>0.5</sub> only</span><span class="badge"></span></div>
+        <div class="vwrap"><video muted playsinline preload="auto"></video><span class="rate">3&times;</span></div>
+        <figcaption></figcaption>
+      </figure>
+    </div>
+
+    <p class="cmp-meta"></p>
+  </div>
+</section>
+
+<section class="section" id="rollout">
+  <div class="wrap">
+    <h2>Full rollout, with an obstacle</h2>
+    <p class="lede"></p>
+    <div class="videoframe vwrap">
+      <video controls muted playsinline preload="metadata" poster="assets/img/rollout-poster.jpg">
+        <source src="assets/video/with-obs.mp4" type="video/mp4">
+      </video>
+      <span class="rate">3&times;</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>University of Michigan &middot; <a href="https://github.com/zsiyuan-eng/spar-vla">Code</a></p>
+  </div>
+</footer>
+
+<script src="assets/archive/pipeline.js"></script>
+<script src="assets/archive/compare.js"></script>
+</body>
+</html>

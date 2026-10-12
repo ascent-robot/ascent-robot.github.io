@@ -1,0 +1,501 @@
+{
+ "tick_frames": 9,
+ "fps": 10,
+ "tasks": [
+  {
+   "task": "CloseFridge",
+   "title": "Close Fridge",
+   "examples": [
+    {
+     "cell": "d0p7_seed9001",
+     "seed": 9001,
+     "distance_m": 0.7,
+     "clips": {
+      "ascent": {
+       "src": "assets/examples/CloseFridge/ex1/ascent.mp4",
+       "poster": "assets/examples/CloseFridge/ex1/ascent.jpg",
+       "frames": 216,
+       "cut_tick": 24,
+       "full_frames": 230,
+       "success": true
+      },
+      "n2m": {
+       "src": "assets/examples/CloseFridge/ex1/n2m.mp4",
+       "poster": "assets/examples/CloseFridge/ex1/n2m.jpg",
+       "frames": 198,
+       "cut_tick": 22,
+       "full_frames": 230,
+       "success": false
+      },
+      "purepi05": {
+       "src": "assets/examples/CloseFridge/ex1/purepi05.mp4",
+       "poster": "assets/examples/CloseFridge/ex1/purepi05.jpg",
+       "frames": 198,
+       "cut_tick": 22,
+       "full_frames": 230,
+       "success": false
+      }
+     }
+    },
+    {
+     "cell": "d2p0_seed7089",
+     "seed": 7089,
+     "distance_m": 2.0,
+     "clips": {
+      "ascent": {
+       "src": "assets/examples/CloseFridge/ex2/ascent.mp4",
+       "poster": "assets/examples/CloseFridge/ex2/ascent.jpg",
+       "frames": 198,
+       "cut_tick": 22,
+       "full_frames": 256,
+       "success": true
+      },
+      "n2m": {
+       "src": "assets/examples/CloseFridge/ex2/n2m.mp4",
+       "poster": "assets/examples/CloseFridge/ex2/n2m.jpg",
+       "frames": 180,
+       "cut_tick": 20,
+       "full_frames": 256,
+       "success": false
+      },
+      "purepi05": {
+       "src": "assets/examples/CloseFridge/ex2/purepi05.mp4",
+       "poster": "assets/examples/CloseFridge/ex2/purepi05.jpg",
+       "frames": 180,
+       "cut_tick": 20,
+       "full_frames": 256,
+       "success": false
+      }
+     }
+    },
+    {
+     "cell": "d2p5_seed7055",
+     "seed": 7055,
+     "distance_m": 2.5,
+     "clips": {
+      "ascent": {
+       "src": "assets/examples/CloseFridge/ex3/ascent.mp4",
+       "poster": "assets/examples/CloseFridge/ex3/ascent.jpg",
+       "frames": 276,
+       "cut_tick": 31,
+       "full_frames": 276,
+       "success": true
+      },
+      "n2m": {
+       "src": "assets/examples/CloseFridge/ex3/n2m.mp4",
+       "poster": "assets/examples/CloseFridge/ex3/n2m.jpg",
+       "frames": 162,
+       "cut_tick": 18,
+       "full_frames": 276,
+       "success": false
+      },
+      "purepi05": {
+       "src": "assets/examples/CloseFridge/ex3/purepi05.mp4",
+       "poster": "assets/examples/CloseFridge/ex3/purepi05.jpg",
+       "frames": 90,
+       "cut_tick": 10,
+       "full_frames": 276,
+       "success": false
+      }
+     }
+    }
+   ]
+  },
+  {
+   "task": "CloseOven",
+   "title": "Close Oven",
+   "examples": [
+    {
+     "cell": "d1p0_seed7047",
+     "seed": 7047,
+     "distance_m": 1.0,
+     "clips": {
+      "ascent": {
+       "src": "assets/examples/CloseOven/ex1/ascent.mp4",
+       "poster": "assets/examples/CloseOven/ex1/ascent.jpg",
+       "frames": 189,
+       "cut_tick": 21,
+       "full_frames": 253,
+       "success": true
+      },
+      "n2m": {
+       "src": "assets/examples/CloseOven/ex1/n2m.mp4",
+       "poster": "assets/examples/CloseOven/ex1/n2m.jpg",
+       "frames": 144,
+       "cut_tick": 16,
+       "full_frames": 253,
+       "success": false
+      },
+      "purepi05": {
+       "src": "assets/examples/CloseOven/ex1/purepi05.mp4",
+       "poster": "assets/examples/CloseOven/ex1/purepi05.jpg",
+       "frames": 126,
+       "cut_tick": 14,
+       "full_frames": 253,
+       "success": false
+      }
+     }
+    },
+    {
+     "cell": "d1p0_seed7059",
+     "seed": 7059,
+     "distance_m": 1.0,
+     "clips": {
+      "ascent": {
+       "src": "assets/examples/CloseOven/ex2/ascent.mp4",
+       "poster": "assets/examples/CloseOven/ex2/ascent.jpg",
+       "frames": 135,
+       "cut_tick": 15,
+       "full_frames": 244,
+       "success": true
+      },
+      "n2m": {
+       "src": "assets/examples/CloseOven/ex2/n2m.mp4",
+       "poster": "assets/examples/CloseOven/ex2/n2m.jpg",
+       "frames": 99,
+       "cut_tick": 11,
+       "full_frames": 244,
+       "success": false
+      },
+      "purepi05": {
+       "src": "assets/examples/CloseOven/ex2/purepi05.mp4",
+       "poster": "assets/examples/CloseOven/ex2/purepi05.jpg",
+       "frames": 126,
+       "cut_tick": 14,
+       "full_frames": 244,
+       "success": false
+      }
+     }
+    },
+    {
+     "cell": "d0p5_seed7061",
+     "seed": 7061,
+     "distance_m": 0.5,
+     "clips": {
+      "ascent": {
+       "src": "assets/examples/CloseOven/ex3/ascent.mp4",
+       "poster": "assets/examples/CloseOven/ex3/ascent.jpg",
+       "frames": 135,
+       "cut_tick": 15,
+       "full_frames": 255,
+       "success": true
+      },
+      "n2m": {
+       "src": "assets/examples/CloseOven/ex3/n2m.mp4",
+       "poster": "assets/examples/CloseOven/ex3/n2m.jpg",
+       "frames": 135,
+       "cut_tick": 15,
+       "full_frames": 255,
+       "success": false
+      },
+      "purepi05": {
+       "src": "assets/examples/CloseOven/ex3/purepi05.mp4",
+       "poster": "assets/examples/CloseOven/ex3/purepi05.jpg",
+       "frames": 90,
+       "cut_tick": 10,
+       "full_frames": 255,
+       "success": false
+      }
+     }
+    }
+   ]
+  },
+  {
+   "task": "CloseFridgeDrawer",
+   "title": "Close Fridge Drawer",
+   "examples": [
+    {
+     "cell": "d2p0_seed7077",
+     "seed": 7077,
+     "distance_m": 2.0,
+     "clips": {
+      "ascent": {
+       "src": "assets/examples/CloseFridgeDrawer/ex1/ascent.mp4",
+       "poster": "assets/examples/CloseFridgeDrawer/ex1/ascent.jpg",
+       "frames": 225,
+       "cut_tick": 25,
+       "full_frames": 240,
+       "success": true
+      },
+      "n2m": {
+       "src": "assets/examples/CloseFridgeDrawer/ex1/n2m.mp4",
+       "poster": "assets/examples/CloseFridgeDrawer/ex1/n2m.jpg",
+       "frames": 135,
+       "cut_tick": 15,
+       "full_frames": 240,
+       "success": false
+      },
+      "purepi05": {
+       "src": "assets/examples/CloseFridgeDrawer/ex1/purepi05.mp4",
+       "poster": "assets/examples/CloseFridgeDrawer/ex1/purepi05.jpg",
+       "frames": 81,
+       "cut_tick": 9,
+       "full_frames": 240,
+       "success": false
+      }
+     }
+    },
+    {
+     "cell": "d1p0_seed7104",
+     "seed": 7104,
+     "distance_m": 1.0,
+     "clips": {
+      "ascent": {
+       "src": "assets/examples/CloseFridgeDrawer/ex2/ascent.mp4",
+       "poster": "assets/examples/CloseFridgeDrawer/ex2/ascent.jpg",
+       "frames": 144,
+       "cut_tick": 16,
+       "full_frames": 212,
+       "success": true
+      },
+      "n2m": {
+       "src": "assets/examples/CloseFridgeDrawer/ex2/n2m.mp4",
+       "poster": "assets/examples/CloseFridgeDrawer/ex2/n2m.jpg",
+       "frames": 90,
+       "cut_tick": 10,
+       "full_frames": 212,
+       "success": false
+      },
+      "purepi05": {
+       "src": "assets/examples/CloseFridgeDrawer/ex2/purepi05.mp4",
+       "poster": "assets/examples/CloseFridgeDrawer/ex2/purepi05.jpg",
+       "frames": 126,
+       "cut_tick": 14,
+       "full_frames": 212,
+       "success": false
+      }
+     }
+    },
+    {
+     "cell": "d1p0_seed7009",
+     "seed": 7009,
+     "distance_m": 1.0,
+     "clips": {
+      "ascent": {
+       "src": "assets/examples/CloseFridgeDrawer/ex3/ascent.mp4",
+       "poster": "assets/examples/CloseFridgeDrawer/ex3/ascent.jpg",
+       "frames": 216,
+       "cut_tick": 24,
+       "full_frames": 232,
+       "success": true
+      },
+      "n2m": {
+       "src": "assets/examples/CloseFridgeDrawer/ex3/n2m.mp4",
+       "poster": "assets/examples/CloseFridgeDrawer/ex3/n2m.jpg",
+       "frames": 153,
+       "cut_tick": 17,
+       "full_frames": 232,
+       "success": false
+      },
+      "purepi05": {
+       "src": "assets/examples/CloseFridgeDrawer/ex3/purepi05.mp4",
+       "poster": "assets/examples/CloseFridgeDrawer/ex3/purepi05.jpg",
+       "frames": 135,
+       "cut_tick": 15,
+       "full_frames": 232,
+       "success": false
+      }
+     }
+    }
+   ]
+  },
+  {
+   "task": "CloseDishwasher",
+   "title": "Close Dishwasher",
+   "examples": [
+    {
+     "cell": "d1p0_seed7049",
+     "seed": 7049,
+     "distance_m": 1.0,
+     "clips": {
+      "ascent": {
+       "src": "assets/examples/CloseDishwasher/ex1/ascent.mp4",
+       "poster": "assets/examples/CloseDishwasher/ex1/ascent.jpg",
+       "frames": 99,
+       "cut_tick": 11,
+       "full_frames": 210,
+       "success": true
+      },
+      "n2m": {
+       "src": "assets/examples/CloseDishwasher/ex1/n2m.mp4",
+       "poster": "assets/examples/CloseDishwasher/ex1/n2m.jpg",
+       "frames": 108,
+       "cut_tick": 12,
+       "full_frames": 210,
+       "success": false
+      },
+      "purepi05": {
+       "src": "assets/examples/CloseDishwasher/ex1/purepi05.mp4",
+       "poster": "assets/examples/CloseDishwasher/ex1/purepi05.jpg",
+       "frames": 144,
+       "cut_tick": 16,
+       "full_frames": 210,
+       "success": false
+      }
+     }
+    },
+    {
+     "cell": "d1p0_seed7016",
+     "seed": 7016,
+     "distance_m": 1.0,
+     "clips": {
+      "ascent": {
+       "src": "assets/examples/CloseDishwasher/ex2/ascent.mp4",
+       "poster": "assets/examples/CloseDishwasher/ex2/ascent.jpg",
+       "frames": 223,
+       "cut_tick": 25,
+       "full_frames": 223,
+       "success": true
+      },
+      "n2m": {
+       "src": "assets/examples/CloseDishwasher/ex2/n2m.mp4",
+       "poster": "assets/examples/CloseDishwasher/ex2/n2m.jpg",
+       "frames": 126,
+       "cut_tick": 14,
+       "full_frames": 223,
+       "success": false
+      },
+      "purepi05": {
+       "src": "assets/examples/CloseDishwasher/ex2/purepi05.mp4",
+       "poster": "assets/examples/CloseDishwasher/ex2/purepi05.jpg",
+       "frames": 99,
+       "cut_tick": 11,
+       "full_frames": 223,
+       "success": false
+      }
+     }
+    },
+    {
+     "cell": "d2p0_seed7039",
+     "seed": 7039,
+     "distance_m": 2.0,
+     "clips": {
+      "ascent": {
+       "src": "assets/examples/CloseDishwasher/ex3/ascent.mp4",
+       "poster": "assets/examples/CloseDishwasher/ex3/ascent.jpg",
+       "frames": 306,
+       "cut_tick": 34,
+       "full_frames": 401,
+       "success": true
+      },
+      "n2m": {
+       "src": "assets/examples/CloseDishwasher/ex3/n2m.mp4",
+       "poster": "assets/examples/CloseDishwasher/ex3/n2m.jpg",
+       "frames": 162,
+       "cut_tick": 18,
+       "full_frames": 401,
+       "success": false
+      },
+      "purepi05": {
+       "src": "assets/examples/CloseDishwasher/ex3/purepi05.mp4",
+       "poster": "assets/examples/CloseDishwasher/ex3/purepi05.jpg",
+       "frames": 126,
+       "cut_tick": 14,
+       "full_frames": 401,
+       "success": false
+      }
+     }
+    }
+   ]
+  },
+  {
+   "task": "CloseMicrowave",
+   "title": "Close Microwave",
+   "examples": [
+    {
+     "cell": "d0p5_seed7042",
+     "seed": 7042,
+     "distance_m": 0.5,
+     "clips": {
+      "ascent": {
+       "src": "assets/examples/CloseMicrowave/ex1/ascent.mp4",
+       "poster": "assets/examples/CloseMicrowave/ex1/ascent.jpg",
+       "frames": 171,
+       "cut_tick": 19,
+       "full_frames": 221,
+       "success": true
+      },
+      "n2m": {
+       "src": "assets/examples/CloseMicrowave/ex1/n2m.mp4",
+       "poster": "assets/examples/CloseMicrowave/ex1/n2m.jpg",
+       "frames": 171,
+       "cut_tick": 19,
+       "full_frames": 221,
+       "success": false
+      },
+      "purepi05": {
+       "src": "assets/examples/CloseMicrowave/ex1/purepi05.mp4",
+       "poster": "assets/examples/CloseMicrowave/ex1/purepi05.jpg",
+       "frames": 90,
+       "cut_tick": 10,
+       "full_frames": 221,
+       "success": false
+      }
+     }
+    },
+    {
+     "cell": "d2p0_seed7071",
+     "seed": 7071,
+     "distance_m": 2.0,
+     "clips": {
+      "ascent": {
+       "src": "assets/examples/CloseMicrowave/ex2/ascent.mp4",
+       "poster": "assets/examples/CloseMicrowave/ex2/ascent.jpg",
+       "frames": 268,
+       "cut_tick": 30,
+       "full_frames": 268,
+       "success": true
+      },
+      "n2m": {
+       "src": "assets/examples/CloseMicrowave/ex2/n2m.mp4",
+       "poster": "assets/examples/CloseMicrowave/ex2/n2m.jpg",
+       "frames": 180,
+       "cut_tick": 20,
+       "full_frames": 268,
+       "success": false
+      },
+      "purepi05": {
+       "src": "assets/examples/CloseMicrowave/ex2/purepi05.mp4",
+       "poster": "assets/examples/CloseMicrowave/ex2/purepi05.jpg",
+       "frames": 135,
+       "cut_tick": 15,
+       "full_frames": 268,
+       "success": false
+      }
+     }
+    },
+    {
+     "cell": "d1p5_seed7042",
+     "seed": 7042,
+     "distance_m": 1.5,
+     "clips": {
+      "ascent": {
+       "src": "assets/examples/CloseMicrowave/ex3/ascent.mp4",
+       "poster": "assets/examples/CloseMicrowave/ex3/ascent.jpg",
+       "frames": 144,
+       "cut_tick": 16,
+       "full_frames": 253,
+       "success": true
+      },
+      "n2m": {
+       "src": "assets/examples/CloseMicrowave/ex3/n2m.mp4",
+       "poster": "assets/examples/CloseMicrowave/ex3/n2m.jpg",
+       "frames": 180,
+       "cut_tick": 20,
+       "full_frames": 253,
+       "success": false
+      },
+      "purepi05": {
+       "src": "assets/examples/CloseMicrowave/ex3/purepi05.mp4",
+       "poster": "assets/examples/CloseMicrowave/ex3/purepi05.jpg",
+       "frames": 108,
+       "cut_tick": 12,
+       "full_frames": 253,
+       "success": false
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

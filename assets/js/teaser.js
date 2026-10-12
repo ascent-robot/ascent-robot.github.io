@@ -20,7 +20,7 @@ var ASCENT_RATE = 3.0;
 (function () {
   "use strict";
 
-  var REVEAL_MS = 420;   // gap between steps lighting up
+  var REVEAL_MS = 630;   // gap between steps lighting up
   var HOLD_MS   = 1300;  // pause on the last frame before looping
   var DRIFT_S   = 0.08;  // resync threshold, seconds
 

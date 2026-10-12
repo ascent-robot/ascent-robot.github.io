@@ -84,8 +84,8 @@
       "n2m": {
        "src": "assets/examples/CloseFridge/ex3/n2m.mp4",
        "poster": "assets/examples/CloseFridge/ex3/n2m.jpg",
-       "frames": 162,
-       "cut_tick": 18,
+       "frames": 126,
+       "cut_tick": 14,
        "full_frames": 276,
        "success": false
       },

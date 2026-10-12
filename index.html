@@ -42,6 +42,10 @@
 
         <div class="step s1" data-stage="1">
           <div class="step-label"><i>1</i>Observe</div>
+          <div class="instr">
+            <span class="avatar" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.2" r="4.2"/><path d="M3.6 21.2c.9-4.6 4.3-7.2 8.4-7.2s7.5 2.6 8.4 7.2z"/></svg></span>
+            <span class="bubble">Close the fridge door.</span>
+          </div>
           <div class="panes">
             <div class="pane cam">
               <video muted playsinline preload="auto" data-src="assets/panels/cam_left.mp4"></video>
@@ -64,12 +68,12 @@
               <span class="tag"><b>T</b> target</span>
             </div>
             <div class="pane field">
-              <video muted playsinline preload="auto" data-src="assets/panels/s.mp4"></video>
-              <span class="tag"><b>S</b> success</span>
-            </div>
-            <div class="pane field">
               <video muted playsinline preload="auto" data-src="assets/panels/c.mp4"></video>
               <span class="tag"><b>C</b> traversable</span>
+            </div>
+            <div class="pane field">
+              <video muted playsinline preload="auto" data-src="assets/panels/s.mp4"></video>
+              <span class="tag"><b>S</b> success</span>
             </div>
           </div>
         </div>
@@ -82,6 +86,7 @@
             <div class="pane scene">
               <video muted playsinline preload="auto" data-src="assets/panels/scene.mp4"></video>
               <span class="tag">top-down</span>
+              <span class="inset-dim" aria-hidden="true"></span>
               <span class="tag inset-tag"><b>P</b><sub>geo</sub></span>
             </div>
           </div>
@@ -111,6 +116,14 @@
 <section class="section alt" id="method">
   <div class="wrap">
     <h2>Method</h2>
+    <p class="lede center">
+      From two onboard RGB views and the instruction, a stereo-language model predicts three bird&rsquo;s-eye-view
+      fields around the robot: where the target is (<b>T</b>), where the frozen manipulation policy would succeed if
+      it took over from that stance (<b>S</b>), and where the base can drive (<b>C</b>). Geodesic planning spreads
+      the predicted success over the traversable map, discounting each stance by its path cost, into a potential
+      <b>P</b><sub>geo</sub>. The base takes a short step up this potential and looks again; a learned gate decides
+      when the current stance is good enough to hand off to the unchanged policy.
+    </p>
     <figure class="method-fig">
       <img src="assets/img/method.png" width="1612" height="760" loading="lazy"
            alt="ASCENT overview: stereo RGB and the instruction go into a learned model that predicts target, success and traversability fields; geodesic planning turns them into a potential that guides the base.">
@@ -169,7 +182,6 @@
           data-purepi05-ok="0">Example 3</button>
       </div>
     </div>
-    <p class="task-meta">Start <b>0.7 m</b> from the fridge</p>
     <div class="trio">
       <figure class="clip is-ours" data-sys="ascent">
         <figcaption class="clip-head"><span class="sys">ASCENT</span><span class="ours">ours</span></figcaption>
@@ -240,7 +252,6 @@
           data-purepi05-ok="0">Example 3</button>
       </div>
     </div>
-    <p class="task-meta">Start <b>1.0 m</b> from the oven</p>
     <div class="trio">
       <figure class="clip is-ours" data-sys="ascent">
         <figcaption class="clip-head"><span class="sys">ASCENT</span><span class="ours">ours</span></figcaption>
@@ -311,7 +322,6 @@
           data-purepi05-ok="0">Example 3</button>
       </div>
     </div>
-    <p class="task-meta">Start <b>2.0 m</b> from the fridge drawer</p>
     <div class="trio">
       <figure class="clip is-ours" data-sys="ascent">
         <figcaption class="clip-head"><span class="sys">ASCENT</span><span class="ours">ours</span></figcaption>
@@ -382,7 +392,6 @@
           data-purepi05-ok="0">Example 3</button>
       </div>
     </div>
-    <p class="task-meta">Start <b>1.0 m</b> from the dishwasher</p>
     <div class="trio">
       <figure class="clip is-ours" data-sys="ascent">
         <figcaption class="clip-head"><span class="sys">ASCENT</span><span class="ours">ours</span></figcaption>
@@ -453,7 +462,6 @@
           data-purepi05-ok="0">Example 3</button>
       </div>
     </div>
-    <p class="task-meta">Start <b>0.5 m</b> from the microwave</p>
     <div class="trio">
       <figure class="clip is-ours" data-sys="ascent">
         <figcaption class="clip-head"><span class="sys">ASCENT</span><span class="ours">ours</span></figcaption>

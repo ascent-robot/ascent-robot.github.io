@@ -117,6 +117,30 @@
      "duration_s": 28.9
     },
     {
+     "dir": "CloseFridge_d0p8_seed9002",
+     "distance": 0.8,
+     "seed": 9002,
+     "label": "0.8 m \u00b7 9002",
+     "frames": 252,
+     "duration_s": 25.2
+    },
+    {
+     "dir": "CloseFridge_d0p8_seed9005",
+     "distance": 0.8,
+     "seed": 9005,
+     "label": "0.8 m \u00b7 9005",
+     "frames": 231,
+     "duration_s": 23.1
+    },
+    {
+     "dir": "CloseFridge_d0p8_seed9006",
+     "distance": 0.8,
+     "seed": 9006,
+     "label": "0.8 m \u00b7 9006",
+     "frames": 255,
+     "duration_s": 25.5
+    },
+    {
      "dir": "CloseFridge_d0p7_seed9001",
      "distance": 0.7,
      "seed": 9001,

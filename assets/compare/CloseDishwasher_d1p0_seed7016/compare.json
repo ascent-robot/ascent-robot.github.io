@@ -1,0 +1,36 @@
+{
+ "task": "CloseDishwasher",
+ "cell": "d1p0_seed7016",
+ "n_frames": 223,
+ "fps": 10,
+ "duration_s": 22.3,
+ "systems": {
+  "ascent": {
+   "label": "ASCENT (ours)",
+   "success": true,
+   "approach_frames": 55,
+   "n2m_step_m": null,
+   "pi05_steps": 133
+  },
+  "n2m": {
+   "label": "N2M",
+   "success": false,
+   "approach_frames": 22,
+   "n2m_step_m": 0.5110196607860702,
+   "pi05_steps": 400
+  },
+  "purepi05": {
+   "label": "pi0.5 only",
+   "success": false,
+   "approach_frames": 1,
+   "n2m_step_m": null,
+   "pi05_steps": 400
+  }
+ },
+ "ascent_source": {
+  "c": "per-task C head (v2)",
+  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/pertaskC_rerun_20261011/CloseDishwasher_L35_S29/job_27885144_seed7016_pertaskC_d1p0",
+  "camera": "az60 el-38 d3.8 bias0.5 (row re-shot)",
+  "pgeo_inset": true
+ }
+}

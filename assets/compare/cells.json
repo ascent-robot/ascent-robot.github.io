@@ -675,6 +675,22 @@
      "label": "2 m \u00b7 7039",
      "frames": 401,
      "duration_s": 40.1
+    },
+    {
+     "dir": "CloseDishwasher_d1p0_seed7016",
+     "distance": 1.0,
+     "seed": 7016,
+     "label": "1 m \u00b7 7016",
+     "frames": 223,
+     "duration_s": 22.3
+    },
+    {
+     "dir": "CloseDishwasher_d1p0_seed7049",
+     "distance": 1.0,
+     "seed": 7049,
+     "label": "1 m \u00b7 7049",
+     "frames": 210,
+     "duration_s": 21.0
     }
    ]
   }

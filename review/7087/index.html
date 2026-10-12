@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>7087 N2M takes</title>
+<style>
+:root{--bg:#f6f7f9;--fg:#15181d;--muted:#5c6470;--line:#d9dee5;--card:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1115;--fg:#e8eaee;--muted:#9aa3ae;--line:#2a2f37;--card:#171a20}}
+:root[data-theme="dark"]{--bg:#0f1115;--fg:#e8eaee;--muted:#9aa3ae;--line:#2a2f37;--card:#171a20}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.4 Inter,system-ui,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:16px}
+.row{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;margin:0 0 14px}
+.hd{display:flex;align-items:center;gap:10px;margin:0 0 8px;font:600 13px/1 ui-monospace,Menlo,monospace}
+.hd button{font:600 12px/1 inherit;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.g figure{margin:0}.g figcaption{color:var(--muted);font-size:12px;margin:4px 0 0}
+video{width:100%;aspect-ratio:1/1;background:#000;border-radius:6px;display:block}
+@media (max-width:700px){.g{grid-template-columns:1fr}}
+</style></head><body><main id="m"></main>
+<script>
+const RATE=3.0, A="../../assets/compare/CloseFridge_d1p0_seed7087/";
+fetch("candidates.json").then(r=>r.json()).then(rows=>{
+  const m=document.getElementById("m");
+  rows.forEach(c=>{
+    const d=document.createElement("section"); d.className="row";
+    d.innerHTML=`<div class="hd"><button type="button">&#9654;</button><span>${c.id}</span><span style="color:var(--muted);font-weight:400">door ${c.open}</span></div>
+    <div class="g"><figure><video muted playsinline preload="metadata" src="${A}ascent.mp4"></video><figcaption>ASCENT</figcaption></figure>
+    <figure><video muted playsinline preload="metadata" src="${c.file}"></video><figcaption>N2M</figcaption></figure>
+    <figure><video muted playsinline preload="metadata" src="${A}purepi05.mp4"></video><figcaption>&pi;<sub>0.5</sub> only</figcaption></figure></div>`;
+    const vs=[...d.querySelectorAll("video")];
+    d.querySelector("button").onclick=()=>{vs.forEach(v=>{try{v.pause();v.currentTime=0;v.playbackRate=RATE}catch(e){}});vs.forEach(v=>{const p=v.play();if(p&&p.catch)p.catch(()=>{})})};
+    m.appendChild(d);
+  });
+});
+</script></body></html>

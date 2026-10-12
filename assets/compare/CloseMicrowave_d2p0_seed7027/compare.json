@@ -29,8 +29,8 @@
  },
  "ascent_source": {
   "c": "per-task C head (v2)",
-  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/pertaskC_rerun_20261011/CloseMicrowave/job_27885144_seed7027_pertaskC_d2p0",
-  "render": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/closefridge/05_videos/pertaskC/CloseMicrowave/d2p0_seed7027/ascent_try2",
+  "episode": "job_27885144_seed7027_pertaskC_d2p0",
+  "render": "ascent_try2",
   "pgeo_inset": true
  }
 }

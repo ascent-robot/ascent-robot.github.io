@@ -29,8 +29,8 @@
  },
  "ascent_source": {
   "c": "per-task C head (v2)",
-  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/pertaskC_rerun_20261011/CloseOven_L2_S29/job_27885142_seed7047_pertaskC_d1p0",
-  "render": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/closefridge/05_videos/pertaskC/CloseOven/d1p0_seed7047/ascent_try1",
+  "episode": "job_27885142_seed7047_pertaskC_d1p0",
+  "render": "ascent_try1",
   "pgeo_inset": true
  }
 }

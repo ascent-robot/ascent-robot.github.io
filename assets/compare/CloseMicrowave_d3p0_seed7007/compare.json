@@ -29,8 +29,8 @@
  },
  "ascent_source": {
   "c": "learned (CloseFridge C head)",
-  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/learnedC_rerun_20261011/CloseMicrowave/job_27884588_seed7007_learnedC_d3p0",
-  "render": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/closefridge/05_videos/learnedC/CloseMicrowave/d3p0_seed7007/ascent_try2",
+  "episode": "job_27884588_seed7007_learnedC_d3p0",
+  "render": "ascent_try2",
   "pgeo_inset": true
  }
 }

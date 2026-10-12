@@ -37,7 +37,7 @@
   "distance_to_stance_m": 0.837
  },
  "ascent_source": {
-  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/closefridge/level_b_episode/job_27888845_seed7087_circle_0.70_-1.55",
+  "episode": "job_27888845_seed7087_circle_0.70_-1.55",
   "pgeo_inset": true
  },
  "tries": {

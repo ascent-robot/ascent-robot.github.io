@@ -17,8 +17,7 @@
     <p class="venue">Preprint</p>
     <h1>ASCENT</h1>
     <p class="subtitle"></p>
-    <p class="authors">Siyuan Zheng</p>
-    <p class="affil">University of Michigan</p>
+    <p class="authors">Anonymous Authors</p>
     <nav class="links">
       <span class="btn is-off" aria-disabled="true">Paper</span>
       <span class="btn is-off" aria-disabled="true">arXiv</span>
@@ -138,12 +137,6 @@
       Five articulated-object closing tasks. In every example, ASCENT, N2M and &pi;<sub>0.5</sub> only start from
       the same pose in the same randomized kitchen, and all three use the same frozen &pi;<sub>0.5</sub> checkpoint
       for manipulation &mdash; they differ only in where the base is when it starts.
-    </p>
-    <p class="lede center">
-      Run straight from where the robot stands, &pi;<sub>0.5</sub> often misjudges distance: it starts reaching
-      before it is close enough and comes up short. From an unfamiliar viewpoint it can also fail to pick out the
-      appliance and drive off somewhere else. The same weaknesses sink N2M whenever its predicted stance is not
-      a good one.
     </p>
 
   <article class="task" id="closefridge" data-task="CloseFridge">
@@ -495,14 +488,18 @@
       </figure>
     </div>
   </article>
+
+    <div class="takeaway">
+      <span class="takeaway-k">Why the baselines fail</span>
+      <p>
+        Run straight from where the robot stands, &pi;<sub>0.5</sub> often misjudges distance: it starts reaching
+        before it is close enough and comes up short. From an unfamiliar viewpoint it can also fail to pick out the
+        appliance and drive off somewhere else. The same weaknesses sink N2M whenever its predicted stance is not
+        a good one.
+      </p>
+    </div>
   </div>
 </section>
-
-<footer>
-  <div class="wrap">
-    <p>University of Michigan</p>
-  </div>
-</footer>
 
 <script src="assets/js/teaser.js"></script>
 <script src="assets/js/results.js"></script>

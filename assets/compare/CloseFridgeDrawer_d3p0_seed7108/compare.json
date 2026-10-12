@@ -29,8 +29,8 @@
  },
  "ascent_source": {
   "c": "per-task C head (v2)",
-  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/pertaskC_rerun_20261011/CloseFridgeDrawer_L15_S29/job_27885142_seed7108_pertaskC_d3p0",
-  "render": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/closefridge/05_videos/pertaskC/CloseFridgeDrawer/d3p0_seed7108/ascent_try1",
+  "episode": "job_27885142_seed7108_pertaskC_d3p0",
+  "render": "ascent_try1",
   "pgeo_inset": true
  }
 }

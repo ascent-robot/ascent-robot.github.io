@@ -1,5 +1,15 @@
 [
  {
+  "id": "backoff10_r6 (N2M pose +10 cm away)",
+  "file": "backoff10_r6.mp4",
+  "open": 0.41
+ },
+ {
+  "id": "backoff10_r1 (N2M pose +10 cm away)",
+  "file": "backoff10_r1.mp4",
+  "open": 0.11
+ },
+ {
   "id": "lat-0.05",
   "file": "lat-0.05.mp4",
   "open": 0.38

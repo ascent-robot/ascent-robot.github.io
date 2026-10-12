@@ -8,9 +8,9 @@
   "ascent": {
    "label": "ASCENT (ours)",
    "success": true,
-   "approach_frames": 157,
+   "approach_frames": 115,
    "n2m_step_m": null,
-   "pi05_steps": 111
+   "pi05_steps": 96
   },
   "n2m": {
    "label": "N2M",
@@ -28,9 +28,9 @@
   }
  },
  "ascent_source": {
-  "c": "learned (CloseFridge C head)",
-  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/learnedC_rerun_20261011/CloseFridgeDrawer_L15_S29/job_27884587_seed7079_learnedC_d2p0",
-  "render": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/closefridge/05_videos/learnedC/CloseFridgeDrawer/d2p0_seed7079/ascent_try1",
+  "c": "per-task C head (v2)",
+  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/pertaskC_rerun_20261011/CloseFridgeDrawer_L15_S29/job_27885144_seed7079_pertaskC_d2p0",
+  "render": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/closefridge/05_videos/pertaskC/CloseFridgeDrawer/d2p0_seed7079/ascent_try1",
   "pgeo_inset": true
  }
 }

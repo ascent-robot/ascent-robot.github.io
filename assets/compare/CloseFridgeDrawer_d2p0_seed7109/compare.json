@@ -1,16 +1,16 @@
 {
  "task": "CloseFridgeDrawer",
  "cell": "d2p0_seed7109",
- "n_frames": 224,
+ "n_frames": 228,
  "fps": 10,
- "duration_s": 22.4,
+ "duration_s": 22.8,
  "systems": {
   "ascent": {
    "label": "ASCENT (ours)",
    "success": true,
-   "approach_frames": 151,
+   "approach_frames": 145,
    "n2m_step_m": null,
-   "pi05_steps": 117
+   "pi05_steps": 164
   },
   "n2m": {
    "label": "N2M",
@@ -28,9 +28,9 @@
   }
  },
  "ascent_source": {
-  "c": "learned (CloseFridge C head)",
-  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/learnedC_rerun_20261011/CloseFridgeDrawer_L15_S29/job_27884590_seed7109_learnedC_d2p0",
-  "render": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/closefridge/05_videos/learnedC/CloseFridgeDrawer/d2p0_seed7109/ascent_try2",
+  "c": "per-task C head (v2)",
+  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/pertaskC_rerun_20261011/CloseFridgeDrawer_L15_S29/job_27885139_seed7109_pertaskC_d2p0",
+  "render": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/closefridge/05_videos/pertaskC/CloseFridgeDrawer/d2p0_seed7109/ascent_try2",
   "pgeo_inset": true
  }
 }

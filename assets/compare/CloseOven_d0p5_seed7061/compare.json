@@ -1,0 +1,36 @@
+{
+ "task": "CloseOven",
+ "cell": "d0p5_seed7061",
+ "n_frames": 255,
+ "fps": 10,
+ "duration_s": 25.5,
+ "systems": {
+  "ascent": {
+   "label": "ASCENT (ours)",
+   "success": true,
+   "approach_frames": 49,
+   "n2m_step_m": null,
+   "pi05_steps": 173
+  },
+  "n2m": {
+   "label": "N2M",
+   "success": false,
+   "approach_frames": 54,
+   "n2m_step_m": 1.319820760383591,
+   "pi05_steps": 400
+  },
+  "purepi05": {
+   "label": "pi0.5 only",
+   "success": false,
+   "approach_frames": 1,
+   "n2m_step_m": null,
+   "pi05_steps": 400
+  }
+ },
+ "ascent_source": {
+  "c": "per-task C head (v2)",
+  "episode": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/pertaskC_rerun_20261011/CloseOven_L2_S29/job_27885140_seed7061_pertaskC_d0p5",
+  "render": "/nfs/turbo/coe-mcity/zsiyuan/spar_vla_runs/closefridge/05_videos/pertaskC/CloseOven/d0p5_seed7061/ascent_try1",
+  "pgeo_inset": true
+ }
+}

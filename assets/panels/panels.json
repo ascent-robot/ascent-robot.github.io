@@ -10,13 +10,13 @@
  ],
  "n_nav": 211,
  "n_manip": 38,
- "n_frames": 249,
- "handoff_index": 210,
+ "n_frames": 243,
+ "handoff_index": 204,
  "fps": 10,
  "panel_px": 480,
  "cam_px": 384,
  "tag": "job_27882385_seed7036_showcase_yaw35p_L0f38_v2s20",
  "task": "CloseFridge",
- "start_frame": 0,
+ "start_frame": 6,
  "placeholder": false
 }

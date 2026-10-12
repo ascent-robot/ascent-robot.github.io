@@ -43,7 +43,7 @@
 
       <div class="flow" id="flow">
 
-        <div class="group" data-stage="1">
+        <div class="group g-rgb" data-stage="1">
           <div class="group-label">onboard RGB</div>
           <div class="panes">
             <div class="pane cam" data-panel="cam_left">
@@ -57,29 +57,29 @@
           </div>
         </div>
 
-        <div class="arrow" data-stage="2" aria-hidden="true"><span></span></div>
+        <div class="arrow a1 right" data-stage="2" aria-hidden="true"><span></span></div>
 
-        <div class="group" data-stage="2">
+        <div class="group g-fld" data-stage="2">
           <div class="group-label">predicted fields (BEV)</div>
           <div class="panes">
             <div class="pane field" data-panel="t">
               <video muted playsinline preload="auto" data-src="assets/panels/t.mp4"></video>
               <span class="tag"><b>T</b> target</span>
             </div>
-            <div class="pane field" data-panel="s">
-              <video muted playsinline preload="auto" data-src="assets/panels/s.mp4"></video>
-              <span class="tag"><b>S</b> success</span>
-            </div>
             <div class="pane field" data-panel="c">
               <video muted playsinline preload="auto" data-src="assets/panels/c.mp4"></video>
               <span class="tag"><b>C</b> traversable</span>
             </div>
+            <div class="pane field" data-panel="s">
+              <video muted playsinline preload="auto" data-src="assets/panels/s.mp4"></video>
+              <span class="tag"><b>S</b> success</span>
+            </div>
           </div>
         </div>
 
-        <div class="arrow" data-stage="3" aria-hidden="true"><span></span></div>
+        <div class="arrow a2 down" data-stage="3" aria-hidden="true"><span></span></div>
 
-        <div class="group" data-stage="3">
+        <div class="group g-pot" data-stage="3">
           <div class="group-label">geodesic potential</div>
           <div class="panes">
             <div class="pane field big" data-panel="p">
@@ -89,9 +89,9 @@
           </div>
         </div>
 
-        <div class="arrow always" aria-hidden="true"><span></span></div>
+        <div class="arrow a3 left always" aria-hidden="true"><span></span></div>
 
-        <div class="group always" data-stage="0">
+        <div class="group g-top always" data-stage="0">
           <div class="group-label">the scene</div>
           <div class="panes">
             <div class="pane top" data-panel="topdown">

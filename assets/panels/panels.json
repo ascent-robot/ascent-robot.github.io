@@ -9,8 +9,8 @@
   "topdown"
  ],
  "n_nav": 211,
- "n_manip": 38,
- "n_frames": 243,
+ "n_manip": 52,
+ "n_frames": 257,
  "handoff_index": 204,
  "fps": 10,
  "panel_px": 480,

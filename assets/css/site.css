@@ -343,8 +343,8 @@ footer{padding:34px 0;text-align:center;color:var(--muted);font-size:14px;border
    ===================================================================== */
 .cover{
   position:relative;min-height:100vh;display:flex;flex-direction:column;
-  background:linear-gradient(180deg, #f3f4f6 0%, #eceef1 100%);
-  border-bottom:1px solid #e2e4e8;
+  background:linear-gradient(180deg, #e9ebee 0%, #e0e3e7 100%);
+  border-bottom:1px solid #d6d9de;
 }
 .cover .hero{padding:44px 0 22px}
 .cover .venue{margin-bottom:10px}
@@ -360,7 +360,7 @@ footer{padding:34px 0;text-align:center;color:var(--muted);font-size:14px;border
   margin-top:auto;padding:22px 0 20px;
   /* stays on screen while the cover is, on screens too short to show it whole */
   position:sticky;bottom:0;z-index:5;
-  background:linear-gradient(to top, rgba(236,238,241,.97) 58%, rgba(236,238,241,0));
+  background:linear-gradient(to top, rgba(224,227,231,.97) 58%, rgba(224,227,231,0));
 }
 .cover-nav .wrap{display:flex;justify-content:space-around;gap:12px}
 .cover-nav a{

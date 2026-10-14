@@ -1,7 +1,7 @@
 :root{
   --bg:#ffffff;
   --fg:#0f172a;
-  --ink:#1f2937;
+  --ink:#16181d;          /* body text: plain near-black, not grey */
   --muted:#5b6475;
   --line:#e6e8ee;
   --alt:#f6f7fa;
@@ -311,3 +311,26 @@ footer{padding:34px 0;text-align:center;color:var(--muted);font-size:14px;border
   background:#f6f5ff;border:1px solid #e7e4fb}
 .takeaway-k{font:700 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 .takeaway p{margin:10px 0 0;color:var(--ink);font-size:16.5px;line-height:1.7}
+
+/* ---------- headline sections (intro, method, results) ---------- */
+.section h2.headline{font-size:clamp(30px,4.4vw,44px);font-weight:700;letter-spacing:-0.025em;
+  color:#111318;text-align:center;margin:0 0 28px}
+.fig-card{
+  margin:0 0 30px;background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:clamp(8px,2vw,22px);
+  box-shadow:0 1px 2px rgba(15,23,42,.04),0 12px 32px rgba(15,23,42,.06);
+}
+.fig-card img{display:block;width:100%;height:auto}
+.prose{max-width:960px;margin:0 auto}
+.prose p{margin:0 0 16px;color:var(--ink);font-size:17.5px;line-height:1.78;text-align:justify}
+.prose p:last-child{margin-bottom:0}
+.prose strong{color:#0b0d12;font-weight:700}
+.prose em{font-style:italic}
+.prose .num{font-weight:800}
+.prose .hl{color:var(--accent)}
+#method .prose{margin-bottom:30px}
+#results .prose{margin-bottom:6px}
+.takeaway p{color:var(--ink)}
+@media (max-width:560px){
+  .prose p{text-align:left;font-size:16.5px}
+}

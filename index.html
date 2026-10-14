@@ -105,24 +105,53 @@
   </div>
 </section>
 
-<section class="section" id="abstract">
-  <div class="wrap narrow">
-    <h2>Abstract</h2>
-    <p class="abstract">Reaching an object’s vicinity does not ensure that a mobile robot is ready to manipulate it. The arrival pose may provide an unsuitable viewpoint, leave an obstacle along the approach, or fall outside the starting conditions of a frozen manipulation policy. We present ASCENT, a rollout-grounded framework for closed-loop repositioning and handoff between navigation and manipulation. A supervised stereo-language model predicts target location, immediate policy-success, and visibility-aware traversability in a local bird’s-eye view. Geodesic propagation combines predicted handoff success with path cost to guide short base motions, while a learned gate determines when to invoke the unchanged manipulation policy. This separates where the policy can succeed from how the base can reach a favorable stance, without reinforcement-learning updates. Across five articulated-object closing tasks and six fully visible, obstacle-free starting distances, task-macro success is 58.4%, compared with 37.9% for N2M and 19.8% for direct frozen-policy execution. Additional CloseFridge tests examine partial visibility and randomized obstacles, and matched evaluations show benefits with four frozen policies. The results support a modular interface that connects empirical manipulation competence to explicit geometric planning.</p>
+<section class="section" id="intro">
+  <div class="wrap">
+    <h2 class="headline">Every policy has its own sweet spot</h2>
+    <figure class="fig-card">
+      <img src="assets/img/stance-heatmaps.jpg" width="2200" height="1110" loading="lazy"
+           alt="Success rate of four frozen manipulation policies from 100 standing poses around the same fridge; each policy succeeds only inside its own small region.">
+    </figure>
+    <div class="prose">
+      <p>
+        Getting a mobile robot <em>next to</em> the fridge is not the same as getting it <em>ready</em> to close
+        it. We placed the robot at <strong>100 standing poses</strong> around one fridge and let
+        <strong>four frozen manipulation policies</strong> try to close it from each pose. Every policy succeeds
+        only inside its own small region, and that region has a different shape and place for each policy.
+        Away from it, success drops to almost nothing: averaged over all 100 poses, even the strongest policy,
+        &pi;<sub>0.5</sub>, closes the door only <strong class="num">26.2%</strong> of the time.
+      </p>
+      <p>
+        <strong class="hl">ASCENT</strong> learns where a frozen policy will succeed and moves the base there
+        before handing over. A stereo-language model predicts the <strong>target</strong>, the policy&rsquo;s
+        <strong>immediate success</strong> and <strong>traversability</strong> in a bird&rsquo;s-eye view around
+        the robot. <strong>Geodesic propagation</strong> turns these into short base motions toward a favorable
+        stance, and a <strong>learned gate</strong> decides when to hand control to the unchanged policy, with no
+        reinforcement-learning updates. Across five articulated-object closing tasks and six fully visible,
+        obstacle-free starting distances, ASCENT reaches <strong class="num hl">58.4%</strong> task-macro
+        success, against <strong class="num">37.9%</strong> for N2M and <strong class="num">19.8%</strong> for
+        running the frozen policy directly. Further CloseFridge tests cover partial visibility and randomized
+        obstacles, and matched evaluations show gains with four different frozen policies.
+      </p>
+    </div>
   </div>
 </section>
 
 <section class="section alt" id="method">
   <div class="wrap">
-    <h2>Method</h2>
-    <p class="lede center">
-      From two onboard RGB views and the instruction, a stereo-language model predicts three bird&rsquo;s-eye-view
-      fields around the robot: where the target is (<b>T</b>), where the frozen manipulation policy would succeed if
-      it took over from that stance (<b>S</b>), and where the base can drive (<b>C</b>). Geodesic planning spreads
-      the predicted success over the traversable map, discounting each stance by its path cost, into a potential
-      <b>P</b><sub>geo</sub>. The base takes a short step up this potential and looks again; a learned gate decides
-      when the current stance is good enough to hand off to the unchanged policy.
-    </p>
+    <h2 class="headline">How ASCENT finds a good stance</h2>
+    <div class="prose">
+      <p>
+        From two onboard RGB views and the instruction, a stereo-language model predicts three bird&rsquo;s-eye-view
+        fields around the robot: where the <strong>target</strong> is (<strong>T</strong>), where the frozen
+        manipulation policy would <strong>succeed</strong> if it took over from that stance (<strong>S</strong>),
+        and where the base can <strong>drive</strong> (<strong>C</strong>). Geodesic planning spreads the predicted
+        success over the traversable map, discounting each stance by its path cost, into a potential
+        <strong>P<sub>geo</sub></strong>. The base takes a short step up this potential and looks again; a
+        <strong>learned gate</strong> decides when the current stance is good enough to hand off to the unchanged
+        policy.
+      </p>
+    </div>
     <figure class="method-fig">
       <img src="assets/img/method.png" width="1612" height="760" loading="lazy"
            alt="ASCENT overview: stereo RGB and the instruction go into a learned model that predicts target, success and traversability fields; geodesic planning turns them into a potential that guides the base.">
@@ -132,12 +161,15 @@
 
 <section class="section" id="results">
   <div class="wrap">
-    <h2>Results</h2>
-    <p class="lede center">
-      Five articulated-object closing tasks. In every example, ASCENT, N2M and &pi;<sub>0.5</sub> only start from
-      the same pose in the same randomized kitchen, and all three use the same frozen &pi;<sub>0.5</sub> checkpoint
-      for manipulation &mdash; they differ only in where the base is when it starts.
-    </p>
+    <h2 class="headline">Results on five different tasks</h2>
+    <div class="prose">
+      <p>
+        Five articulated-object closing tasks. In every example, ASCENT, N2M and &pi;<sub>0.5</sub> only start from
+        the <strong>same pose</strong> in the same randomized kitchen, and all three use the <strong>same frozen
+        &pi;<sub>0.5</sub> checkpoint</strong> for manipulation &mdash; they differ only in where the base is when
+        it starts.
+      </p>
+    </div>
 
   <article class="task" id="closefridge" data-task="CloseFridge">
     <div class="task-head">
